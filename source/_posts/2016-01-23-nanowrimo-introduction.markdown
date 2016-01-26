@@ -3,17 +3,14 @@ layout: post
 title: "NanoWrimo: Introduction"
 date: 2016-01-23 12:22:19 -0500
 comments: true
-excerpt: help me out!
 categories: NanoWrimo 
+
 ---
 
+Check out the introduction to the draft of the novel I wrote for NanoWrimo! Please give me some feedback so I can improve the writing style and write up some more drafts before publishing.
+
 <em>The bulky grey heart monitor recorded the irregular heart beat of a young girl as she laid in a hospital bed. The monitor flickered, creating an eerie glow around the girl that flashed in and out with each beat. The girl in question lay motionless, her brown hair, bunched in matted dreads from dirt and sweat, framed her gaunt face. Her big, almost sinister, grey eyes were fixed on the only other person in the room...
-</em> 
-
-
-
-<!--more-->
-
+</em> <!--more-->
 ...a skinny and frail man dressed in a white lab coat. He had just entered the small room just moments before. The man swallowed nervously and approached the bed, careful to position himself at least arms-length away... 
 
 
