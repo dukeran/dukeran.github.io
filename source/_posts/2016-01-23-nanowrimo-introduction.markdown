@@ -3,10 +3,22 @@ layout: post
 title: "NanoWrimo: Introduction"
 date: 2016-01-23 12:22:19 -0500
 comments: true
-categories: NanoWrimo
+excerpt: help me out!
+categories: NanoWrimo 
 ---
 
-The bulky grey heart monitor recorded the irregular heart beat of a young girl as she laid in a hospital bed. The monitor flickered, creating an eerie glow around the girl that flashed in and out with each beat. The girl in question lay motionless, her brown hair, bunched in matted dreads from dirt and sweat, framed her gaunt face. Her big, almost sinister, grey eyes were fixed on the only other person in the room, a skinny man dressed in a white lab coat. He had just entered the small room just moments before. The man swallowed nervously and approached the bed, careful to position himself at least arms-length away. 
+<em>The bulky grey heart monitor recorded the irregular heart beat of a young girl as she laid in a hospital bed. The monitor flickered, creating an eerie glow around the girl that flashed in and out with each beat. The girl in question lay motionless, her brown hair, bunched in matted dreads from dirt and sweat, framed her gaunt face. Her big, almost sinister, grey eyes were fixed on the only other person in the room...
+</em> 
+
+
+
+<!--more-->
+
+...a skinny and frail man dressed in a white lab coat. He had just entered the small room just moments before. The man swallowed nervously and approached the bed, careful to position himself at least arms-length away... 
+
+
+
+
 The girl didn’t move an inch but her eyes followed his every movement. 
 The man leaned forward an inch, “What’s your name, sweetie?” he said, his voice higher pitched than he had wanted. He cleared his throat. 
 The only answer was the heart monitor. 
