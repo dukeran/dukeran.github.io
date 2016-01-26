@@ -7,5 +7,6 @@ sharing: true
 footer: true
 ---
 
-{% img left http://imgur.com/bnir9zv/320/250 %} 
+<img src="http://i.imgur.com/bnir9zv.png" />
+
 Kerrie Durham is a fourth year student of Linguistics and East-Asian Languages at the University of Florida. She has traveled to five continents and is now embarking on her first trip into the world of Ruby. 
