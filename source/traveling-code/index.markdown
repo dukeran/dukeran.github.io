@@ -1,24 +1,17 @@
 ---
-layout: post
+layout: page
 title: "traveling_code"
 date: 2016-01-26 16:56
-categories: traveling_code
 comments: true
 sharing: true
 footer: true
 ---
 
-###The beginning of _Traveling Code_
-
-<div id="container">
-<center><img src="http://i.imgur.com/afjR3yl.jpg" alt="The Sahara on camelback" height="300" width="300"/>
-</center>
-<p>
-</p>
-</div>
+####The beginning of _Travel Labs_
 
 Life is full of surprises. Four years ago, if I was told that one day I would be writing a travel blog about coding, I would have laughed. Four years ago I was herding cows in the Atlas mountains in Morocco, living with the Berber people in a tiny village that didn't have running water, let alone internet or computers. Even up to a couple of months ago I hadn't the slightest idea of what coding entailed or what Ruby even was...
 
+![Morocco 2012, Imgur](http://i.imgur.com/afjR3yl.jpg)
 <!--more-->
 
 One night, a good friend of mine started pitching the idea of coding over a couple of beers. It was cold outside and the two tankards of Blue Moon had warmed me up to the idea of learning a computer language. After all, I thought, I am a linguistics student, learning a computer language can't be all that difficult after my experiences learning languages such as Chinese and Russian. Boy, was I wrong. After just a few weeks with my _Learning to Program_ by Chris Pine, I quickly discovered that learning to code is a whole different animal. Not only are you learning how to create code in order to communicate to the computer but you also have to learn how it thinks. I no longer consider sorting words in alphabetical order to be an easy task. Things that I had taken for granted such as defining 'word' and the idea of compiling a list has had me pulling my hair out as my code would fail again and again. But it is through these failures that I have learned what I know about precious Ruby and have come to realize that so far I am actually thoroughly enjoying myself.
