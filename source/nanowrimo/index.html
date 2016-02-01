@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+HEAOEOEAGEGAE
+
+{% assign index = true %}
+{% for post in site.categories['nanowrimo'] %}
+{% assign content = post.content %}
+    <article class="post">{% include article.html %}</article>
+{% endfor %}
+
+<!-- TODO FIX IT MAY NOT WORK -->
+<nav id="pagenavi">
+    {% if paginator.previous_page %}
+        <a href="{{paginator.previous_page}}" class="prev">Prev</a>
+    {% endif %}
+    {% if paginator.next_page %}
+        <a href="{{paginator.next_page}}" class="next">Next</a>
+    {% endif %}
+</nav>
