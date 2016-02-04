@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "traveling_code"
+title: "Introduction to the Traveling Code"
 date: 2016-01-26 16:56
 categories: traveling_code
 comments: true
