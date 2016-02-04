@@ -4,7 +4,7 @@
   <title><![CDATA[TechReg]]></title>
   <link href="http://dukeran.github.io/atom.xml" rel="self"/>
   <link href="http://dukeran.github.io/"/>
-  <updated>2016-02-03T20:10:24-05:00</updated>
+  <updated>2016-02-03T20:33:48-05:00</updated>
   <id>http://dukeran.github.io/</id>
   <author>
     <name><![CDATA[Kerrie Durham]]></name>
@@ -14,7 +14,374 @@
 
   
   <entry>
-    <title type="html"><![CDATA[traveling_code]]></title>
+    <title type="html"><![CDATA[Upcoming Trip to South America ]]></title>
+    <link href="http://dukeran.github.io/blog/2016/02/03/the-adventure-begins/"/>
+    <updated>2016-02-03T18:56:00-05:00</updated>
+    <id>http://dukeran.github.io/blog/2016/02/03/the-adventure-begins</id>
+    <content type="html"><![CDATA[<h4>How I coped with leaving my family and beginning my 2 month trip exploring South America - through code!</h4>
+
+<p>And so it has begun! My friend Charlotte and I have boarded our flight for    Lima, the capital of Peru. Saying goodbye to my family and extended family   brought tears to my eyes. I couldn&rsquo;t help but feel bittersweet as we drove out   of my driveway towards the airport, leaving my family waving at the doorstep of   the house. Going on big trips is always bittersweet for me, I always hate   saying goodbye to those I love but at the same time I can&rsquo;t wait for another   adventure to begin. For me, there is nothing like new sites to see and new   experiences to be had, all the while meeting new and interesting people.
+Like most other people on the internet, I&rsquo;m obsessed with my cat. She is my   pride and joy, even if she can be a bit peevish sometimes. I swear, with the   rate of cat pictures being uploaded daily, the percentage of Mr. Whiskers   pictures might surpass the amount of porn to be found on the web.</p>
+
+<div id="container">
+<center><img src="http://i.imgur.com/9AljWer.png" alt="My own cat picture" height="300" width="300"/>
+</center>
+<p>
+</p>
+</div>
+
+
+<p>Since I am going to miss my little feline buddy, I decided to practice some of   my new coding skills, using the few tools I have in my tool kit. In the   following code (with the help of Chris Pine&rsquo;s example as a template) I created a   little virtual cat that I can take care of while I&rsquo;m away from my living, breathing fuzzball. I named the program Thea, after my precious fuzzball.</p>
+
+<!--more-->
+
+
+<p><strong>The items I used in my recently aquired tool kit:</strong>
+<em>variables
+</em>loops
+<em>recursion
+</em>creating a new class
+*defining methods</p>
+
+<p>And&hellip;that about sums up my entire tool kit. Hopefully one day that list will   be longer!</p>
+
+<p>My most recently aquired tool is <em>defining a class</em>. A brand new and exciting   concept. This time I initialized the <code>class Pet</code>
+Note that class remains lowercase while the new class that you are initializing   is capitalized. One thing that was stressed in Chris Pine&rsquo;s book is the   difference between <code>new</code> and <code>initialize</code>. It&rsquo;s not a horribly confusing   concept but I want to go over it real quick. <code>new</code> comes first. You cannot   initialize something that has not yet been created! <code>new</code> creates the objet   that the computer will then <code>initialize</code>. <code>new</code> creates the object only, it is   never used again while <code>initialized</code> needs to be defined because you need to   explain to your poor computer what you want to do with this brand new object.   You can only use <code>new</code> to <em>create</em> a new object, if you use <code>initialize</code> in   order to create a new object, the computer will freak out, looking for some    nonexistant object to start up, and will spit out a panic-stricken error code.   Yes, personalizing the computer and its languages makes it easier for me to   understand, hopefully it does for you too!</p>
+
+<p>This one <code>class</code> is 155 lines long and it only takes one to initialize it and  to get it running.</p>
+
+<p>Within the <code>class</code> I have defined over seven different methods;
+* <code>initialize</code>
+* <code>feed</code>
+* <code>play</code>
+* <code>walk</code>
+* <code>put_to_bed</code>
+* <code>code</code></p>
+
+<p>In each <code>def</code> (define) I clearly lay out the groundworks for how I want the   computer to respond in different scenarios. In this code I only have two   possible environments; asleep and not asleep. I can only imagine this makes it   easier to keep track of all the possiblities and possible behaviors. I   definitely suggest if you try writing this code for practice and you&rsquo;re new   like me, start with only two different possible scenarios until you&rsquo;re able to   effortlessly keep track of all the different possibilities.</p>
+
+<p>There&rsquo;s one thing that confused me when I first read the template and started   writing my own program. What the heck does &ldquo; <code>@variable</code> mean? In the first 5   lines of code there is this new symbol that I&rsquo;ve never used before: &rdquo;<code>@</code>&ldquo;. Much   confused. I decided to look it up and explain it to other newbies: the <code>@</code> signifies an instance variable of the specific class. It is important because it only functions within the class and you use it to tell the computer that you want something done in that particular instance. It&rsquo;s also cool because it is the same variable but at different defined instances you assign it a different value.</p>
+
+<p>Here&rsquo;s a quick snippet from one of the <code>def</code> methods:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">feed</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;Thea purrs as you pick up her food bag.&quot;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;She winds in between your legs as you put a handful of food into her food bowl.&quot;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="vi">@stuffinbelly</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">passageoftime</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">peeve</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I think in the big picture this is an amazing thing about Ruby. This is line 13 to 20 of the code. I have in no way defined the variable <code>passageoftime</code> or <code>peeve</code>. I don&rsquo;t  define them until line 91 and line 125. To me, this is so not intuitive.  Imagine going up to someone and being like &ldquo;Remember that blubber story?&rdquo; and   then laugh. That person is going to look at you like you&rsquo;ve lost your freaking   mind because s/he has no context or no idea what you could possibly be   referring to. Later that day you walk up to that same person and tell him/her  a hilarious story about how you were living with some Inuits up in Alaska and you   thought the blubber they offered you was ice cream until you took your first   bite. Now this person has context and can laugh with you. But this is only after you have taken a random variable of &ldquo;blubber&rdquo; and put it into a context.   It doesn&rsquo;t need to work this way with Ruby! You do the same thing with   Ruby and she will know to laugh earlier in the day even before you told the   blubber story just because you told it later that day. It&rsquo;s as if Ruby is living in a world where she processes your code so fast that time doesn&rsquo;t   exist in a linear fashion. Whether something happens in the past or in the   future doesn&rsquo;t matter to it, as long as it is all in that one instance of code.   If this isn&rsquo;t cool to you, then well, you lack imagination and excitement in   your life&hellip;</p>
+
+<p><img src="http://i.imgur.com/bIMAIO2.png" alt="Taking the fuzzball for a swim and a walk" /></p>
+
+<p>A new thing I learned while writing this code is the (method/function?)   <code>private</code>. It means that the following code and its functions can only be   modified in the code itself and the user running the program can&rsquo;t access it.   It&rsquo;s like the hidden part of the code that is running behind the scenes and   makes the interface run smoothly.</p>
+
+<p>Here&rsquo;s the loop that I threw into my code!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">ask</span> <span class="n">question</span>
+</span><span class='line'>  <span class="n">thea</span> <span class="o">=</span> <span class="no">Pet</span><span class="o">.</span><span class="n">new</span> <span class="s1">&#39;Thea&#39;</span>
+</span><span class='line'>  <span class="k">while</span> <span class="kp">true</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="n">question</span>
+</span><span class='line'>    <span class="n">reply</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;feed&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">feed</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;walk&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">walk</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;put to bed&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">puttobed</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;pick up&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">pickup</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;code&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">code</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;play&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">play</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>      <span class="nb">puts</span> <span class="s1">&#39;I\&#39;m sorry, but that is beyond virtual Thea\&#39;s capabilities.&#39;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I love the concept of <code>while true</code>. I&rsquo;m sure a lot could be written about just   that one concept but I&rsquo;m tired and this kid behind me keeps hitting my seat  and crying. Has anyone ever been on a flight without any kids? I feel as if that  is as rare as finding a wild unicorn.
+Anyways I used this loop here in order to keep the program continuing until it   terminates on its own either because the virtual cat becomes too hungry or too   peevish. My cat can become a monster when she is cranky and peeved by us   humans messing with her, so I decided that the program would end if she became   too upset with the human interacting with her. No one likes a grumpy, cranky   cat, unless of course you&rsquo;re the owner of Grumpy Cat and you&rsquo;re making it rain   from all the royalties.
+One thing that I really enjoy about this loop is it&rsquo;s incredibly simple and   that you can keep piling on the <code>elsif</code>. Truly, as many as you want. As long   as the <code>if</code> gets a counter <code>else</code> and you put the correct number of <code>ends</code> all   is good in the computer world.</p>
+
+<p>The link to my full code can be found <a href="https://github.com/dukeran/thea">here on github</a>! I&rsquo;ll also write a post   about how I got github to work for me, since it&rsquo;s not user friendly to those  who are new to the tech world.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="s1">&#39;Congratulations! A baby Thea has been born! You can do a lot of cool</span>
+</span><span class='line'><span class="s1">  things with this interactive, virtual Thea while you\&#39;re away. You need to</span>
+</span><span class='line'><span class="s1">  take good care of her and make sure she goes to the bathroom and eats well.</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">  Here are some of the things you can do with Thea:</span>
+</span><span class='line'><span class="s1">    1. feed</span>
+</span><span class='line'><span class="s1">    2. walk</span>
+</span><span class='line'><span class="s1">    3. put to bed</span>
+</span><span class='line'><span class="s1">    4. pick up</span>
+</span><span class='line'><span class="s1">    5. play</span>
+</span><span class='line'><span class="s1">    6. code - you can even practice your coding while she\&#39;s around!&#39;</span>
+</span><span class='line'><span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'><span class="nb">puts</span> <span class="s1">&#39;What would you like to do with Thea?&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S. I would like to note that I am going to miss my family more than
+my cat but it felt weird writing a code in which I fed my sister and
+would have to take her to go to the bathroom. &lt;3 you Lanjing!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Upcoming Trip to South America ]]></title>
+    <link href="http://dukeran.github.io/blog/2016/02/03/upcoming-trip-to-south-america/"/>
+    <updated>2016-02-03T17:56:00-05:00</updated>
+    <id>http://dukeran.github.io/blog/2016/02/03/upcoming-trip-to-south-america</id>
+    <content type="html"><![CDATA[<h4>How I am going to keep track of everything</h4>
+
+<p>I am counting down the days until I board my flight to the captial of Peru!! I wrote a small program that will display my statement of purpose, my itinerary, and how many more days I have left until my return flight. Since Archer is one of my favorite TV shows, I often run my programs under the name of Woodhouse and he is incredibly helpful. In this blog post I&rsquo;ve linked my incredibly simple program to github so you guys can take a look!
+The beginning was easy. I tried to use a little bit of everything I&rsquo;ve learned in the first ten chapters of <em>Learn to Code</em> by Chris Pine.</p>
+
+<p>I used my first array:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">options</span> <span class="o">=</span> <span class="o">[[</span><span class="s1">&#39;Statement of Purpose&#39;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>                  <span class="o">[</span><span class="s1">&#39;Itinerary&#39;</span>           <span class="o">]</span><span class="p">,</span>
+</span><span class='line'>                  <span class="o">[</span><span class="s1">&#39;Days Left &#39;</span>       <span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!--more-->
+
+
+<p>I have to admit, I&rsquo;m still a little confused on what exactly an array is. Chris Pine usually does an excellent job explaining things so I&rsquo;m not sure if I&rsquo;m just unusually thick or if array&rsquo;s are actually a hard concept for a newbie to understand right away.</p>
+
+<p>After doing a little research, it seems to me that an array is listing of objects which all share a common element. The computer is able to see them as individual units but also as a singular group unit which is valuable when you&rsquo;re dealing with a large amount of objects. EXAMPLE two different groups of objects and the comp has to deal with them in seperate ways.</p>
+
+<p>Here comes Woodhouse!!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="s1">&#39;Hello Miss, my name is Woodhouse and I am here to help you with your trip.</span>
+</span><span class='line'><span class="s1">Please choose from the following options&#39;</span>
+</span><span class='line'><span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'><span class="n">op_num</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'><span class="n">options</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">op</span><span class="o">|</span>
+</span><span class='line'>    <span class="nb">name</span> <span class="o">=</span> <span class="n">op</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">beginning</span> <span class="o">=</span> <span class="n">op_num</span><span class="o">.</span><span class="n">to_s</span> <span class="o">+</span> <span class="s1">&#39;. &#39;</span> <span class="o">+</span> <span class="nb">name</span>
+</span><span class='line'><span class="nb">puts</span> <span class="n">beginning</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</span><span class='line'><span class="n">op_num</span> <span class="o">=</span> <span class="n">op_num</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">ask</span> <span class="n">question</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="n">question</span>
+</span><span class='line'>    <span class="n">reply</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span><span class="o">.</span><span class="n">downcase</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;statement of purpose&#39;</span>
+</span><span class='line'>            <span class="no">STATEMENT</span> <span class="no">OF</span> <span class="no">PURPOSE</span>
+</span><span class='line'>        <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;itinerary&#39;</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;long list of itinerary&#39;</span>
+</span><span class='line'>        <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;days left&#39;</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;t-lift off&#39;</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;Miss, please refer to the options above and choose one of the following.&#39;</span>
+</span><span class='line'>        <span class="n">ask</span> <span class="n">question</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'><span class="n">ask</span> <span class="s1">&#39;Miss, which would you like to know about?&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I love the <code>def</code> function, which is just short for &lsquo;define&rsquo;. IF there is one thing I&rsquo;m certain about, is that programmers will find the laziest way to type/do everything. As James explained it to me, the define function is like creating a written contract with your computer. You tell it that under these circumstances I want you to do the following&hellip; And you explain in detail exactly how you want it to behave. I love it! It allows for so much creativity. So the <code>def</code> alerts the computer/program that you&rsquo;re are about to give it its contract. The <code>ask</code> is the actual command that you define and will use in the future, while <code>question</code> is the variable that you&rsquo;ll define after the contract is written. In the code I wrote above, the <code>'Miss, which would you like to know about?'</code> is how I decided to define the varibale <code>question</code>.</p>
+
+<p>Another thing that I would like to point out to other newbie coders of Ruby is that <code>elsif</code> is a subset of the <code>if</code> function, and that <code>else</code> is the counterpart to the <code>if</code>. You can fit as many <code>elsif</code>s as you want under <code>if</code> but you can&rsquo;t keep piling on the <code>else</code>s after the <code>if</code>. One <code>if</code> and one <code>else</code> within a loop. I learned that after much frustration.</p>
+
+<p>The second part of the code is the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="s1">&#39;Would you like to know about anything else?&#39;</span>
+</span><span class='line'><span class="n">replytwo</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span><span class="o">.</span><span class="n">downcase</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">replytwo</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span>
+</span><span class='line'>        <span class="n">ask</span> <span class="s1">&#39;Miss, which would you like to know about?&#39;</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">replytwo</span> <span class="o">==</span> <span class="s1">&#39;no&#39;</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;Very well Miss, have a good day.&#39;</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;Please choose one of the options mentioned above.&#39;</span>
+</span><span class='line'>        <span class="n">ask</span> <span class="s1">&#39;Miss, which would you like to know about?&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This was actually the hardest part of the code. I spent more time on this part than I should have because I kept crashing my computer. I made the mistake of putting in</p>
+
+<p><code>ruby
+while
+        true
+    if reply == 'yes' ...etc
+   </code></p>
+
+<p>Which made my computer have a panic attack as it tried to compute the huge motherload of tasks I had just given it. To repeat the loop infinatum. Impossible, so my computer took the easy way out and committed suicide every time. Poor thing. I just removed the <code>while true</code> and it fixed everything.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Arsenal]]></title>
+    <link href="http://dukeran.github.io/blog/2016/02/03/my-arsenal/"/>
+    <updated>2016-02-03T16:56:00-05:00</updated>
+    <id>http://dukeran.github.io/blog/2016/02/03/my-arsenal</id>
+    <content type="html"><![CDATA[<p><em>In about a week I will be taking a one way flight to Lima, Peru armed with nothing more than a daypack and the smallest Dell Chromebook I have ever seen. For the past month before my trip I have been familiarizing myself with the chromebook and with Chris Pine&rsquo;s <em>Learn to Program</em> (second edition).</em></p>
+
+<div id="container">
+<center><img src="http://imgur.com/Yu5aRuC.jpg" alt="Thanks Pine!" height="300" width="300"/>
+</center>
+<p>
+</p>
+</div>
+
+
+
+
+<!--more-->
+
+
+<h4>The Technology: Dell CRM3120-1667BLK 11.6" Chromebook</h4>
+
+<p>This has been my favorite laptop that I have ever used. Granted, I haven&rsquo;t used more than probably 3 clunky old laptops but I can gaurantee that this is undoubtably my favorite. It&rsquo;s small, fast, spill proof (incredibly important when it comes to me), and it isn&rsquo;t loaded down with stupid and unecessary programs. All this for the price $199.99 on Amazon which makes it a steal unless you&rsquo;re planning to use it for gaming&hellip;but I don&rsquo;t know much about that since I&rsquo;m all about the Xbox.
+So far this laptop has worked great for the few things that I need a laptop to do; browse reddit, code Ruby, watch Archer, and stream&hellip;videos. Thankfully my friend James Gibson was able to install chroot in order for us to play with the linux system and install Ruby.
+If anyone is interested in the chromebook, here&rsquo;s the <a href="http://www.amazon.com/dp/B00FBBUIDM/ref=psdc_565108_t1_B00K1FY3M0">link</a> for it on Amazon</p>
+
+<p><img src="http://imgur.com/utWYQ0K.jpg" alt="Front view" />
+<img src="http://imgur.com/GCpqHm9.jpg" alt="Back view" /></p>
+
+<h4>Knowledge is Power: <em>Learn to Program</em> second edition by Chris Pine</h4>
+
+<p>When James first lent me this book, it was pristine and the spine unbroken. Now it lays here, dog-eared, marked, highlighted, and coffee stained (that&rsquo;s why the spill-proof laptop was so valuable). I have read it cover to cover and overall I would give it an excellent rating. The beginning 8 chapters are phenomenal; easy to read and even made me chuckle. His smooth writing and horrible jokes made the book fun and actually motivated me to do the challenging assignments at the end of each chapter. However, chapter 9 left me feeling abandoned and inccapable as he leaped into more complicated coding without any actual teaching. Chapter 9 and on had me pulling my hair and asking my friends for help constantly because in my mind it was either sink or swim. However, I kept at it and when I finished the book I definitely beleived that the book was 100% worth it. It serves as an excellent reference guide and opened the door to how coders think and the problems they face. It also served as an excellent foundation to someone who has never had an inkling of coding before in her life.</p>
+
+<p>His chapters and the concepts he covered are as follows:</p>
+
+<ul>
+<li>Numbers - Integers and Floats</li>
+<li>Strings</li>
+<li>puts, gets, and chomp methods</li>
+<li>branching</li>
+<li>looping</li>
+<li>arrays</li>
+<li>Classes - hash class and time class</li>
+<li>Methods that take and return procs</li>
+</ul>
+
+
+<p>As a newbie coder, some of the concepts were harder than others. I&rsquo;m still trying to wrap my head around arrays and how they exactly work. But overall, I must say thanks to Chris Pine for his excellent introduction.</p>
+
+<p><img src="http://imgur.com/Yu5aRuC.jpg" alt="Thanks Pine!" /></p>
+
+<p>In a few days I will be using another book/source in order to continue learning while in Peru. I definitely still have a lot of qustions that hopefully I&rsquo;ll figure out as I learn more about Ruby, such as what is YAML and why do developers love recursive acronyms so much?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction to the Traveling Code]]></title>
     <link href="http://dukeran.github.io/blog/2016/01/26/introduction/"/>
     <updated>2016-01-26T16:56:00-05:00</updated>
     <id>http://dukeran.github.io/blog/2016/01/26/introduction</id>

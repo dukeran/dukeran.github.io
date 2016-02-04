@@ -1,0 +1,316 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>Upcoming Trip to South America   | TechReg</title>
+
+<meta name="author" content="Kerrie Durham"> 
+
+<meta name="description" content="A playground for my imagination and thoughts."> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="TechReg" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+
+	
+</head>
+
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">TechReg</a></h1>
+<h4>building projects one day at a time</h4>
+<nav id="main-nav"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/traveling-code/">Traveling Code</a></li>
+	<li><a href="/nanowrimo/">NanoWrimo</a></li>
+	
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/traveling-code/">Traveling Code</a></li>
+	<li><a href="/nanowrimo/">NanoWrimo</a></li>
+	
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:dukeran.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Upcoming Trip to South America</h2>
+	<div class="entry-content"><h4>How I am going to keep track of everything</h4>
+
+<p>I am counting down the days until I board my flight to the captial of Peru!! I wrote a small program that will display my statement of purpose, my itinerary, and how many more days I have left until my return flight. Since Archer is one of my favorite TV shows, I often run my programs under the name of Woodhouse and he is incredibly helpful. In this blog post I&rsquo;ve linked my incredibly simple program to github so you guys can take a look!
+The beginning was easy. I tried to use a little bit of everything I&rsquo;ve learned in the first ten chapters of <em>Learn to Code</em> by Chris Pine.</p>
+
+<p>I used my first array:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">options</span> <span class="o">=</span> <span class="o">[[</span><span class="s1">&#39;Statement of Purpose&#39;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>                  <span class="o">[</span><span class="s1">&#39;Itinerary&#39;</span>           <span class="o">]</span><span class="p">,</span>
+</span><span class='line'>                  <span class="o">[</span><span class="s1">&#39;Days Left &#39;</span>       <span class="o">]]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!--more-->
+
+
+<p>I have to admit, I&rsquo;m still a little confused on what exactly an array is. Chris Pine usually does an excellent job explaining things so I&rsquo;m not sure if I&rsquo;m just unusually thick or if array&rsquo;s are actually a hard concept for a newbie to understand right away.</p>
+
+<p>After doing a little research, it seems to me that an array is listing of objects which all share a common element. The computer is able to see them as individual units but also as a singular group unit which is valuable when you&rsquo;re dealing with a large amount of objects. EXAMPLE two different groups of objects and the comp has to deal with them in seperate ways.</p>
+
+<p>Here comes Woodhouse!!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="s1">&#39;Hello Miss, my name is Woodhouse and I am here to help you with your trip.</span>
+</span><span class='line'><span class="s1">Please choose from the following options&#39;</span>
+</span><span class='line'><span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'><span class="n">op_num</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'><span class="n">options</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">op</span><span class="o">|</span>
+</span><span class='line'>    <span class="nb">name</span> <span class="o">=</span> <span class="n">op</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>    <span class="n">beginning</span> <span class="o">=</span> <span class="n">op_num</span><span class="o">.</span><span class="n">to_s</span> <span class="o">+</span> <span class="s1">&#39;. &#39;</span> <span class="o">+</span> <span class="nb">name</span>
+</span><span class='line'><span class="nb">puts</span> <span class="n">beginning</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</span><span class='line'><span class="n">op_num</span> <span class="o">=</span> <span class="n">op_num</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">ask</span> <span class="n">question</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="n">question</span>
+</span><span class='line'>    <span class="n">reply</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span><span class="o">.</span><span class="n">downcase</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;statement of purpose&#39;</span>
+</span><span class='line'>            <span class="no">STATEMENT</span> <span class="no">OF</span> <span class="no">PURPOSE</span>
+</span><span class='line'>        <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;itinerary&#39;</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;long list of itinerary&#39;</span>
+</span><span class='line'>        <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;days left&#39;</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;t-lift off&#39;</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;Miss, please refer to the options above and choose one of the following.&#39;</span>
+</span><span class='line'>        <span class="n">ask</span> <span class="n">question</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'><span class="n">ask</span> <span class="s1">&#39;Miss, which would you like to know about?&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I love the <code>def</code> function, which is just short for &lsquo;define&rsquo;. IF there is one thing I&rsquo;m certain about, is that programmers will find the laziest way to type/do everything. As James explained it to me, the define function is like creating a written contract with your computer. You tell it that under these circumstances I want you to do the following&hellip; And you explain in detail exactly how you want it to behave. I love it! It allows for so much creativity. So the <code>def</code> alerts the computer/program that you&rsquo;re are about to give it its contract. The <code>ask</code> is the actual command that you define and will use in the future, while <code>question</code> is the variable that you&rsquo;ll define after the contract is written. In the code I wrote above, the <code>'Miss, which would you like to know about?'</code> is how I decided to define the varibale <code>question</code>.</p>
+
+<p>Another thing that I would like to point out to other newbie coders of Ruby is that <code>elsif</code> is a subset of the <code>if</code> function, and that <code>else</code> is the counterpart to the <code>if</code>. You can fit as many <code>elsif</code>s as you want under <code>if</code> but you can&rsquo;t keep piling on the <code>else</code>s after the <code>if</code>. One <code>if</code> and one <code>else</code> within a loop. I learned that after much frustration.</p>
+
+<p>The second part of the code is the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="s1">&#39;Would you like to know about anything else?&#39;</span>
+</span><span class='line'><span class="n">replytwo</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span><span class="o">.</span><span class="n">downcase</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">replytwo</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span>
+</span><span class='line'>        <span class="n">ask</span> <span class="s1">&#39;Miss, which would you like to know about?&#39;</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">replytwo</span> <span class="o">==</span> <span class="s1">&#39;no&#39;</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;Very well Miss, have a good day.&#39;</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'>        <span class="nb">puts</span> <span class="s1">&#39;Please choose one of the options mentioned above.&#39;</span>
+</span><span class='line'>        <span class="n">ask</span> <span class="s1">&#39;Miss, which would you like to know about?&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This was actually the hardest part of the code. I spent more time on this part than I should have because I kept crashing my computer. I made the mistake of putting in</p>
+
+<p><code>ruby
+while
+        true
+    if reply == 'yes' ...etc
+   </code></p>
+
+<p>Which made my computer have a panic attack as it tried to compute the huge motherload of tasks I had just given it. To repeat the loop infinatum. Impossible, so my computer took the easy way out and committed suicide every time. Poor thing. I just removed the <code>while true</code> and it fixed everything.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-02-03T17:56:00-05:00" pubdate data-updated="true"></time></div>
+	
+
+
+
+
+	
+		<span class="comments"><a href="/blog/2016/02/03/upcoming-trip-to-south-america/#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016
+
+    Kerrie Durham
+
+<br>
+Powered by Octopress.
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'dukeran';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dukeran.github.io/blog/2016/02/03/upcoming-trip-to-south-america/';
+        var disqus_url = 'http://dukeran.github.io/blog/2016/02/03/upcoming-trip-to-south-america/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+</body>
+</html>

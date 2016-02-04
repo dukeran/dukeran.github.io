@@ -1,0 +1,356 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>Upcoming Trip to South America   | TechReg</title>
+
+<meta name="author" content="Kerrie Durham"> 
+
+<meta name="description" content="A playground for my imagination and thoughts."> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="TechReg" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+
+	
+</head>
+
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">TechReg</a></h1>
+<h4>building projects one day at a time</h4>
+<nav id="main-nav"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/traveling-code/">Traveling Code</a></li>
+	<li><a href="/nanowrimo/">NanoWrimo</a></li>
+	
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/traveling-code/">Traveling Code</a></li>
+	<li><a href="/nanowrimo/">NanoWrimo</a></li>
+	
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:dukeran.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Upcoming Trip to South America</h2>
+	<div class="entry-content"><h4>How I coped with leaving my family and beginning my 2 month trip exploring South America - through code!</h4>
+
+<p>And so it has begun! My friend Charlotte and I have boarded our flight for    Lima, the capital of Peru. Saying goodbye to my family and extended family   brought tears to my eyes. I couldn&rsquo;t help but feel bittersweet as we drove out   of my driveway towards the airport, leaving my family waving at the doorstep of   the house. Going on big trips is always bittersweet for me, I always hate   saying goodbye to those I love but at the same time I can&rsquo;t wait for another   adventure to begin. For me, there is nothing like new sites to see and new   experiences to be had, all the while meeting new and interesting people.
+Like most other people on the internet, I&rsquo;m obsessed with my cat. She is my   pride and joy, even if she can be a bit peevish sometimes. I swear, with the   rate of cat pictures being uploaded daily, the percentage of Mr. Whiskers   pictures might surpass the amount of porn to be found on the web.</p>
+
+<div id="container">
+<center><img src="http://i.imgur.com/9AljWer.png" alt="My own cat picture" height="300" width="300"/>
+</center>
+<p>
+</p>
+</div>
+
+
+<p>Since I am going to miss my little feline buddy, I decided to practice some of   my new coding skills, using the few tools I have in my tool kit. In the   following code (with the help of Chris Pine&rsquo;s example as a template) I created a   little virtual cat that I can take care of while I&rsquo;m away from my living, breathing fuzzball. I named the program Thea, after my precious fuzzball.</p>
+
+<!--more-->
+
+
+<p><strong>The items I used in my recently aquired tool kit:</strong>
+<em>variables
+</em>loops
+<em>recursion
+</em>creating a new class
+*defining methods</p>
+
+<p>And&hellip;that about sums up my entire tool kit. Hopefully one day that list will   be longer!</p>
+
+<p>My most recently aquired tool is <em>defining a class</em>. A brand new and exciting   concept. This time I initialized the <code>class Pet</code>
+Note that class remains lowercase while the new class that you are initializing   is capitalized. One thing that was stressed in Chris Pine&rsquo;s book is the   difference between <code>new</code> and <code>initialize</code>. It&rsquo;s not a horribly confusing   concept but I want to go over it real quick. <code>new</code> comes first. You cannot   initialize something that has not yet been created! <code>new</code> creates the objet   that the computer will then <code>initialize</code>. <code>new</code> creates the object only, it is   never used again while <code>initialized</code> needs to be defined because you need to   explain to your poor computer what you want to do with this brand new object.   You can only use <code>new</code> to <em>create</em> a new object, if you use <code>initialize</code> in   order to create a new object, the computer will freak out, looking for some    nonexistant object to start up, and will spit out a panic-stricken error code.   Yes, personalizing the computer and its languages makes it easier for me to   understand, hopefully it does for you too!</p>
+
+<p>This one <code>class</code> is 155 lines long and it only takes one to initialize it and  to get it running.</p>
+
+<p>Within the <code>class</code> I have defined over seven different methods;
+* <code>initialize</code>
+* <code>feed</code>
+* <code>play</code>
+* <code>walk</code>
+* <code>put_to_bed</code>
+* <code>code</code></p>
+
+<p>In each <code>def</code> (define) I clearly lay out the groundworks for how I want the   computer to respond in different scenarios. In this code I only have two   possible environments; asleep and not asleep. I can only imagine this makes it   easier to keep track of all the possiblities and possible behaviors. I   definitely suggest if you try writing this code for practice and you&rsquo;re new   like me, start with only two different possible scenarios until you&rsquo;re able to   effortlessly keep track of all the different possibilities.</p>
+
+<p>There&rsquo;s one thing that confused me when I first read the template and started   writing my own program. What the heck does &ldquo; <code>@variable</code> mean? In the first 5   lines of code there is this new symbol that I&rsquo;ve never used before: &rdquo;<code>@</code>&ldquo;. Much   confused. I decided to look it up and explain it to other newbies: the <code>@</code> signifies an instance variable of the specific class. It is important because it only functions within the class and you use it to tell the computer that you want something done in that particular instance. It&rsquo;s also cool because it is the same variable but at different defined instances you assign it a different value.</p>
+
+<p>Here&rsquo;s a quick snippet from one of the <code>def</code> methods:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">feed</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;Thea purrs as you pick up her food bag.&quot;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;She winds in between your legs as you put a handful of food into her food bowl.&quot;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="vi">@stuffinbelly</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">passageoftime</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">peeve</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I think in the big picture this is an amazing thing about Ruby. This is line 13 to 20 of the code. I have in no way defined the variable <code>passageoftime</code> or <code>peeve</code>. I don&rsquo;t  define them until line 91 and line 125. To me, this is so not intuitive.  Imagine going up to someone and being like &ldquo;Remember that blubber story?&rdquo; and   then laugh. That person is going to look at you like you&rsquo;ve lost your freaking   mind because s/he has no context or no idea what you could possibly be   referring to. Later that day you walk up to that same person and tell him/her  a hilarious story about how you were living with some Inuits up in Alaska and you   thought the blubber they offered you was ice cream until you took your first   bite. Now this person has context and can laugh with you. But this is only after you have taken a random variable of &ldquo;blubber&rdquo; and put it into a context.   It doesn&rsquo;t need to work this way with Ruby! You do the same thing with   Ruby and she will know to laugh earlier in the day even before you told the   blubber story just because you told it later that day. It&rsquo;s as if Ruby is living in a world where she processes your code so fast that time doesn&rsquo;t   exist in a linear fashion. Whether something happens in the past or in the   future doesn&rsquo;t matter to it, as long as it is all in that one instance of code.   If this isn&rsquo;t cool to you, then well, you lack imagination and excitement in   your life&hellip;</p>
+
+<p><img src="http://i.imgur.com/bIMAIO2.png" alt="Taking the fuzzball for a swim and a walk" /></p>
+
+<p>A new thing I learned while writing this code is the (method/function?)   <code>private</code>. It means that the following code and its functions can only be   modified in the code itself and the user running the program can&rsquo;t access it.   It&rsquo;s like the hidden part of the code that is running behind the scenes and   makes the interface run smoothly.</p>
+
+<p>Here&rsquo;s the loop that I threw into my code!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">ask</span> <span class="n">question</span>
+</span><span class='line'>  <span class="n">thea</span> <span class="o">=</span> <span class="no">Pet</span><span class="o">.</span><span class="n">new</span> <span class="s1">&#39;Thea&#39;</span>
+</span><span class='line'>  <span class="k">while</span> <span class="kp">true</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="n">question</span>
+</span><span class='line'>    <span class="n">reply</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;feed&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">feed</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;walk&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">walk</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;put to bed&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">puttobed</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;pick up&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">pickup</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;code&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">code</span>
+</span><span class='line'>    <span class="k">elsif</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">&#39;play&#39;</span>
+</span><span class='line'>      <span class="n">thea</span><span class="o">.</span><span class="n">play</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>      <span class="nb">puts</span> <span class="s1">&#39;I\&#39;m sorry, but that is beyond virtual Thea\&#39;s capabilities.&#39;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I love the concept of <code>while true</code>. I&rsquo;m sure a lot could be written about just   that one concept but I&rsquo;m tired and this kid behind me keeps hitting my seat  and crying. Has anyone ever been on a flight without any kids? I feel as if that  is as rare as finding a wild unicorn.
+Anyways I used this loop here in order to keep the program continuing until it   terminates on its own either because the virtual cat becomes too hungry or too   peevish. My cat can become a monster when she is cranky and peeved by us   humans messing with her, so I decided that the program would end if she became   too upset with the human interacting with her. No one likes a grumpy, cranky   cat, unless of course you&rsquo;re the owner of Grumpy Cat and you&rsquo;re making it rain   from all the royalties.
+One thing that I really enjoy about this loop is it&rsquo;s incredibly simple and   that you can keep piling on the <code>elsif</code>. Truly, as many as you want. As long   as the <code>if</code> gets a counter <code>else</code> and you put the correct number of <code>ends</code> all   is good in the computer world.</p>
+
+<p>The link to my full code can be found <a href="https://github.com/dukeran/thea">here on github</a>! I&rsquo;ll also write a post   about how I got github to work for me, since it&rsquo;s not user friendly to those  who are new to the tech world.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="s1">&#39;Congratulations! A baby Thea has been born! You can do a lot of cool</span>
+</span><span class='line'><span class="s1">  things with this interactive, virtual Thea while you\&#39;re away. You need to</span>
+</span><span class='line'><span class="s1">  take good care of her and make sure she goes to the bathroom and eats well.</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">  Here are some of the things you can do with Thea:</span>
+</span><span class='line'><span class="s1">    1. feed</span>
+</span><span class='line'><span class="s1">    2. walk</span>
+</span><span class='line'><span class="s1">    3. put to bed</span>
+</span><span class='line'><span class="s1">    4. pick up</span>
+</span><span class='line'><span class="s1">    5. play</span>
+</span><span class='line'><span class="s1">    6. code - you can even practice your coding while she\&#39;s around!&#39;</span>
+</span><span class='line'><span class="nb">puts</span> <span class="kp">nil</span>
+</span><span class='line'><span class="nb">puts</span> <span class="s1">&#39;What would you like to do with Thea?&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S. I would like to note that I am going to miss my family more than
+my cat but it felt weird writing a code in which I fed my sister and
+would have to take her to go to the bathroom. &lt;3 you Lanjing!</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-02-03T18:56:00-05:00" pubdate data-updated="true"></time></div>
+	
+
+
+
+
+	
+		<span class="comments"><a href="/blog/2016/02/03/the-adventure-begins/#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016
+
+    Kerrie Durham
+
+<br>
+Powered by Octopress.
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'dukeran';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dukeran.github.io/blog/2016/02/03/the-adventure-begins/';
+        var disqus_url = 'http://dukeran.github.io/blog/2016/02/03/the-adventure-begins/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+</body>
+</html>
