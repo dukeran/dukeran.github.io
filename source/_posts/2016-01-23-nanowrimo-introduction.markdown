@@ -10,8 +10,7 @@ categories: NanoWrimo
 Check out the introduction to the draft of the novel I wrote for NanoWrimo! Please give me some feedback so I can improve the writing style and write up some more drafts before publishing.
 
 <em>The bulky grey heart monitor recorded the irregular heart beat of a young girl as she laid in a hospital bed. The monitor flickered, creating an eerie glow around the girl that flashed in and out with each beat. The girl in question lay motionless, her brown hair, bunched in matted dreads from dirt and sweat, framed her gaunt face. Her big, almost sinister, grey eyes were fixed on the only other person in the room...
-</em> <!--more-->
-...a skinny and frail man dressed in a white lab coat. He had just entered the small room just moments before. The man swallowed nervously and approached the bed, careful to position himself at least arms-length away... 
+</em> <!--more-->...a skinny and frail man dressed in a white lab coat. He had just entered the small room just moments before. The man swallowed nervously and approached the bed, careful to position himself at least arms-length away... 
 
 
 
@@ -23,7 +22,6 @@ The only answer was the heart monitor.
 The grey eyes flickered and she blinked but made no other movement.  
 “Where were you before you came here?” by now his heart was pounding against his rib cage, his hands clammy. 
 
-EET
 
 There was movement from the door and the man visibly jolted in fear. As the door opened, a tall woman entered the room, she too was wearing a labcoat and she walked towards the man with long, confident strides. Her lips were in a thin line and turned slightly downwards in frustration. The man turned to her, unable to hide his feelings of relief at having someone else at his side.
 “Baptiste, sir,” said the man and with his new found confidence, he turned to Baptiste and asked, “Is she stupid or just plain mute?” 

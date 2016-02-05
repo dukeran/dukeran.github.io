@@ -8,7 +8,7 @@ sharing: true
 footer: true
 ---
 
-*In about a week I will be taking a one way flight to Lima, Peru armed with nothing more than a daypack and the smallest Dell Chromebook I have ever seen. For the past month before my trip I have been familiarizing myself with the chromebook and with Chris Pine's _Learn to Program_ (second edition).*
+In about a week I will be taking a one way flight to Lima, Peru armed with nothing more than a daypack and the smallest Dell Chromebook I have ever seen. For the past month before my trip I have been familiarizing myself with the chromebook and with Chris Pine's _Learn to Program_ (second edition).
 
 <div id="container">
 <center><img src="http://imgur.com/Yu5aRuC.jpg" alt="Thanks Pine!" height="300" width="300"/>
