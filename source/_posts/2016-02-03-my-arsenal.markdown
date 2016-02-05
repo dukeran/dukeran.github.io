@@ -11,16 +11,17 @@ footer: true
 In about a week I will be taking a one way flight to Lima, Peru armed with nothing more than a daypack and the smallest Dell Chromebook I have ever seen. For the past month before my trip I have been familiarizing myself with the chromebook and with Chris Pine's _Learn to Program_ (second edition).
 
 <div id="container">
-<center><img src="http://imgur.com/Yu5aRuC.jpg" alt="Thanks Pine!" height="300" width="300"/>
+<center><img src="http://imgur.com/Yu5aRuC.jpg" alt="Thanks Pine!" height="200" width="200" style="margin:20px 20px">
 </center>
 <p>
 </p>
 </div>
 
-<!--more-->
 
 ####The Technology: Dell CRM3120-1667BLK 11.6" Chromebook
 This has been my favorite laptop that I have ever used. Granted, I haven't used more than probably 3 clunky old laptops but I can gaurantee that this is undoubtably my favorite. It's small, fast, spill proof (incredibly important when it comes to me), and it isn't loaded down with stupid and unecessary programs. All this for the price $199.99 on Amazon which makes it a steal unless you're planning to use it for gaming...but I don't know much about that since I'm all about the Xbox.
+
+<!--more-->
 So far this laptop has worked great for the few things that I need a laptop to do; browse reddit, code Ruby, watch Archer, and stream...videos. Thankfully my friend James Gibson was able to install chroot in order for us to play with the linux system and install Ruby.
 If anyone is interested in the chromebook, here's the [link](http://www.amazon.com/dp/B00FBBUIDM/ref=psdc_565108_t1_B00K1FY3M0) for it on Amazon
 

@@ -8,24 +8,24 @@ sharing: true
 footer: true
 ---
 
+
 ####How I coped with leaving my family and beginning my 2 month trip exploring South America - through code!
 
-
-And so it has begun! My friend Charlotte and I have boarded our flight for    Lima, the capital of Peru. Saying goodbye to my family and extended family   brought tears to my eyes. I couldn't help but feel bittersweet as we drove out   of my driveway towards the airport, leaving my family waving at the doorstep of   the house. Going on big trips is always bittersweet for me, I always hate   saying goodbye to those I love but at the same time I can't wait for another   adventure to begin. For me, there is nothing like new sites to see and new   experiences to be had, all the while meeting new and interesting people.
-Like most other people on the internet, I'm obsessed with my cat. She is my   pride and joy, even if she can be a bit peevish sometimes. I swear, with the   rate of cat pictures being uploaded daily, the percentage of Mr. Whiskers   pictures might surpass the amount of porn to be found on the web.
-
-
+And so it has begun! My friend Charlotte and I have boarded our flight for    Lima, the capital of Peru. Saying goodbye to my family and extended family brought tears to my eyes. 
 <div id="container">
-<center><img src="http://i.imgur.com/9AljWer.png" alt="My own cat picture" height="300" width="300"/>
+<br>
+<center><img src="http://i.imgur.com/9AljWer.png"  alt="My own cat picture" height="300" width="300" style="margin:10px 10px">
 </center>
-<p>
-</p>
 </div>
 
+I couldn't help but feel bittersweet as we drove out   of my driveway towards the airport, leaving my family waving at the doorstep of   the house. Going on big trips is always bittersweet for me, I always hate   saying goodbye to those I love but at the same time I can't wait for another   adventure to begin. For me, there is nothing like new sites to see and new   experiences to be had, all the while meeting new and interesting people.
+
+Like most other people on the internet, I'm obsessed with my cat. She is my   pride and joy, even if she can be a bit peevish sometimes. I swear, with the   rate of cat pictures being uploaded daily, the percentage of Mr. Whiskers   pictures might surpass the amount of porn to be found on the web.
+
+<!--more-->
 
 Since I am going to miss my little feline buddy, I decided to practice some of   my new coding skills, using the few tools I have in my tool kit. In the   following code (with the help of Chris Pine's example as a template) I created a   little virtual cat that I can take care of while I'm away from my living, breathing fuzzball. I named the program Thea, after my precious fuzzball.
 
-<!--more-->
 
 **The items I used in my recently aquired tool kit:**
 *variables
@@ -35,7 +35,6 @@ Since I am going to miss my little feline buddy, I decided to practice some of  
 *defining methods
 
 And...that about sums up my entire tool kit. Hopefully one day that list will   be longer!
-
 
 My most recently aquired tool is _defining a class_. A brand new and exciting   concept. This time I initialized the ````class Pet````
 Note that class remains lowercase while the new class that you are initializing   is capitalized. One thing that was stressed in Chris Pine's book is the   difference between `new` and `initialize`. It's not a horribly confusing   concept but I want to go over it real quick. `new` comes first. You cannot   initialize something that has not yet been created! `new` creates the objet   that the computer will then `initialize`. `new` creates the object only, it is   never used again while `initialized` needs to be defined because you need to   explain to your poor computer what you want to do with this brand new object.   You can only use `new` to _create_ a new object, if you use `initialize` in   order to create a new object, the computer will freak out, looking for some    nonexistant object to start up, and will spit out a panic-stricken error code.   Yes, personalizing the computer and its languages makes it easier for me to   understand, hopefully it does for you too!
