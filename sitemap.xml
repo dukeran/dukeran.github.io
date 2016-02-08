@@ -29,16 +29,19 @@
     <lastmod>2016-01-23T12:22:19-05:00</lastmod>
   </url>
   <url>
-    <loc>http://dukeran.github.io/blog/archives/</loc>
+    <loc>http://dukeran.github.io/nanowrimo/</loc>
   </url>
   <url>
     <loc>http://dukeran.github.io/archives/</loc>
   </url>
   <url>
+    <loc>http://dukeran.github.io/code-for-thought/</loc>
+  </url>
+  <url>
     <loc>http://dukeran.github.io/blog/</loc>
   </url>
   <url>
-    <loc>http://dukeran.github.io/nanowrimo/</loc>
+    <loc>http://dukeran.github.io/blog/archives/</loc>
   </url>
   <url>
     <loc>http://dukeran.github.io/traveling-code/</loc>
@@ -54,5 +57,8 @@
   </url>
   <url>
     <loc>http://dukeran.github.io/blog/categories/traveling-code/</loc>
+  </url>
+  <url>
+    <loc>http://dukeran.github.io/blog/categories/code-for-thought/</loc>
   </url>
 </urlset>
