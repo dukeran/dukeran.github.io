@@ -4,7 +4,7 @@
   <title><![CDATA[TechReg]]></title>
   <link href="http://dukeran.github.io/atom.xml" rel="self"/>
   <link href="http://dukeran.github.io/"/>
-  <updated>2016-02-05T14:27:58-05:00</updated>
+  <updated>2016-02-08T11:43:13-05:00</updated>
   <id>http://dukeran.github.io/</id>
   <author>
     <name><![CDATA[Kerrie Durham]]></name>
@@ -12,6 +12,75 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Virtual_cats]]></title>
+    <link href="http://dukeran.github.io/blog/2016/02/08/virtual-cats/"/>
+    <updated>2016-02-08T11:18:32-05:00</updated>
+    <id>http://dukeran.github.io/blog/2016/02/08/virtual-cats</id>
+    <content type="html"><![CDATA[<h3>From Lima to the Amazon</h3>
+
+<h4>Virtual cats become dangerous</h4>
+
+<p>  I am almost a week into my trip in Peru and I have yet to write a blog post about it! I never know how to start, should I write about reccommendations of where to go? Or should I just focus solely on Ruby and make a few mentions about Peru. I guess a blend of the two would be best. Then there&rsquo;s the struggle of finding time to write. My travel partner and I are always on the go, whether we&rsquo;re exploring Lima or trying new food.</p>
+
+<div id="container">
+<br>
+<center><img src="http://i.imgur.com/wsK1Pf9.png"  alt="Ruins of Huaca Pucllana - ancient, pre-incan ruins which exist in the middle of Miraflores. It is a singularly odd experience to stand on ruins dating back to the first century C.E. while surrounded by high rise banks and apartments (Charlotte Newell)" height="300" width="300" style="margin:10px 10px">
+</center>
+</div>
+
+
+<p>  The first five days we were in Lima, the capital city of Peru. I had packed for a full on winter with long underwear, fleece layers, wool socks, etc. only to find myself sweating in long pants and a T-shirt by noon. The weather is noticeably different from my hometown in Naples, Florida. Instead of constant sun, Lima has constant cloud cover. Clouds that loom low over the city and make it impossible to determine if it&rsquo;s raining or if you&rsquo;re constantly walking around in damp, ground-level clouds.</p>
+
+<!--more-->
+
+
+<p>  We stayed in the Miraflores district in a hostel called Pariwana which I would reccomend to anyone, however I can&rsquo;t say the same about Miraflores. Miraflores is a more modern and well-off district in Lima but it is full of USA fast-food chains and empty department stores. However, the bus station isn&rsquo;t far away and it is easy to get to downtown Lima where you can see catacombs and the governor&rsquo;s palace.</p>
+
+<p>  The hostel we stayed in was always full of backpackers and trekkers from all over the world, though they tended to be Western, middle class, and experienced in the ways of backpacking. I have yet to meet anyone who says, &ldquo;this is my first trip abroad&rdquo;. I could have spent whole days in the hostel lounge area sitting on giant pillows and enjoying cups of coco tea while swapping stories with other backpackers. Everyone has a different perspective and have experienced different things while on the road and are happy to give reccommendations.</p>
+
+<p>  In fact it is because of this interchange that Charlotte and I decided to completely go off our itinerary and take a flight towards Iquitos instead of Cusco. Charlotte and I had laid out a map of Peru and were discussing which bus to take and which hostels had the best deals over beer and cigars when someone mentioned that if we get a chance we should head towards Iquitos which is in the Peruvian rainforest and is only accessable by plane. Before long we were booking our flight out into the Amazon.</p>
+
+<p>  While in the hostel in Lima, I tried to improve the program that I had written about in my last blog post about my cat, Thea. One evening I had brought out my laptop to have Charlotte give a go at trying to keep virtual Thea happy and well-fed (since sometimes my cat likes to have other people play with her than just me). Before long the laptop was being passed from person to person as everyone tried keep Thea content. It was a great way to find out which part of the code had bugs and how I could improve the program itself. Soon I made it where Thea could kill you if she became too hungry, if she became too bored, or if you didn&rsquo;t take her to the bathroom. I increased the difficulty and soon we were playing that whoever could survive the longest with my fierce cat would be the winner. This was definitely a great way to meet new people and to work on my code!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Boolean Values]]></title>
+    <link href="http://dukeran.github.io/blog/2016/02/07/boolean-values/"/>
+    <updated>2016-02-07T00:44:33-05:00</updated>
+    <id>http://dukeran.github.io/blog/2016/02/07/boolean-values</id>
+    <content type="html"><![CDATA[<p>original:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">boolean_to_string</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span><span class='line'>          <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="kp">true</span>
+</span><span class='line'><span class="s2">&quot;true&quot;</span>
+</span><span class='line'>          <span class="k">else</span> <span class="n">b</span> <span class="o">==</span> <span class="kp">false</span>
+</span><span class='line'><span class="s2">&quot;false&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>better answer:</p>
+
+<p>def boolean_to_string(b)
+  b ? &ldquo;true&rdquo; : &ldquo;false&rdquo;
+end</p>
+
+<p>need to have a question mark to denote the boolean theory!!</p>
+
+<p>need to submit something to get my streak going :( tomorrow is th real thing)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Upcoming Trip to South America ]]></title>
