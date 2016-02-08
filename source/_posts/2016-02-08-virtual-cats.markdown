@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Virtual_cats"
+title: "From Lima to the Amazon"
 date: 2016-02-08 11:18:32 -0500
 categories: traveling_code
 comments: true
@@ -8,8 +8,6 @@ sharing: true
 footer: true
  
 ---
-
-###From Lima to the Amazon
 ####Virtual cats become dangerous 
   
   I am almost a week into my trip in Peru and I have yet to write a blog post about it! I never know how to start, should I write about reccommendations of where to go? Or should I just focus solely on Ruby and make a few mentions about Peru. I guess a blend of the two would be best. Then there's the struggle of finding time to write. My travel partner and I are always on the go, whether we're exploring Lima or trying new food. 
