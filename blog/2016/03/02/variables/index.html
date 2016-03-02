@@ -5,7 +5,7 @@
 	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title>building projects one day at a time  | TechReg</title>
+	<title>Variables  | TechReg</title>
 
 <meta name="author" content="Kerrie Durham"> 
 
@@ -100,32 +100,9 @@ $(document).ready(
 
 </header>
 
-	<div id="content" class="inner"><head>
-<style>
-p.main {
-		text-align: center;
-}
-</style>
-</head>
-
-<p class="main">
-<span style="font-weight:bold">The best way to learn about things is to write about them!  </span>
-
-</p>
-
-
-
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2016/03/02/variables/">
-		
-			Variables</a>
-	</h2>
-	<div class="entry-content">
-		<h2>Learning About Variable Scope</h2>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Variables</h2>
+	<div class="entry-content"><h2>Learning About Variable Scope</h2>
 
 <h3>Hardcore Parcour</h3>
 
@@ -148,10 +125,56 @@ Code Wars (give a brief description)</p>
 
 <p>I have to admit, I was at quite a loss - a feeling that was incredibly frustrating.</p>
 
+<!--more-->
 
-		
-		<a href="/blog/2016/03/02/variables/" class="more-link">Read on &rarr;</a>
-	</div>
+
+<p>You&rsquo;re given the following:</p>
+
+<p>def stringy(size)
+ (insert your code here)
+end</p>
+
+<p>I first thought about how to approach the problem in the most simple way possible. How could I break it down so that the string starting at one?</p>
+
+<p>my first thought was to start at: &lsquo;&rsquo;&lsquo;base = &ldquo;1&rdquo;&rsquo;&lsquo;&rsquo; and go from there. I recalled the first method I internalized;</p>
+
+<p>(1..size).each do |number|</p>
+
+<p>because size is within the parenthesis, Ruby knows that size is going to be a variable for a number. The &ldquo;number&rdquo; put into &ldquo;| |&rdquo; symbology is giving a variable name to what is inside the parenthesis.
+I figured that for every other number I would want a &ldquo;1&rdquo; and then a &ldquo;0&rdquo; so with this dichotomy I figured I could equate it to even and odds. For every odd I would assign a &ldquo;1&rdquo; value and for every even I would assign a &ldquo;0&rdquo; value. Mind you, I was writing anything that came to mind and erasing and cleaning up things as I went. At this point I removed the base = &ldquo;1&rdquo; since I would be no longer needing it if my array started at 1 and I could assign a &ldquo;1&rdquo; on the 1 value.</p>
+
+<p>after running a few tests, I came up with the following:</p>
+
+<p>def stringy(size)
+  (1..size).each do |number|
+  if number.odd?
+    puts &ldquo;1&rdquo;
+  else<br/>
+    puts &ldquo;0&rdquo;
+  end
+  end
+end
+puts stringy(5)</p>
+
+<p>This did not work quite how I wanted it to:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">1</span>
+</span><span class='line'><span class="mi">0</span>
+</span><span class='line'><span class="mi">1</span>
+</span><span class='line'><span class="mi">0</span>
+</span><span class='line'><span class="mi">1</span>
+</span><span class='line'><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">5</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>First of all, what was with the 1..5? I was confused and so I asked a friend. Ruby, when not given a specific task, will regurgitate as much as she can, trying to give you as much information as possible unless specified otherwise. Since nothing was specified between the end of the <code>if</code>, <code>else</code> and the <code>end</code> of the defining method, then Ruby told you the parameters of what she did was between 1 and 5, hence the 1..5. Another thing to note is that Ruby gave us the 1&rsquo;s and 0&rsquo;s we were looking for, but not in a consecutive line.</p>
+</div>
 
 
 <div class="meta">
@@ -174,85 +197,31 @@ Code Wars (give a brief description)</p>
 
 
 	
-		<span class="comments"><a href="/blog/2016/03/02/variables//code-for-thought/index.html#disqus_thread">Comments</a></span>
+		<span class="comments"><a href="/blog/2016/03/02/variables/#disqus_thread">Comments</a></span>
 	
 </div></article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2016/02/07/boolean-values/">
-		
-			Boolean Values</a>
-	</h2>
-	<div class="entry-content">
-		<h4>Fundamentals of Ones and Zeros</h4>
-
-<p>Thanks to a friend of mine, I&rsquo;ve recently been doing a lot of Kata on <strong>Codewars</strong>. If you&rsquo;ve never done katas on Codewars before, I would <em>highly, highly, highly</em> recommend it. It&rsquo;s a great site where your competitive nature can get the best of you as you compete with other friends for &lsquo;honor&rsquo;. There are eight levels of difficulty and each kata is a creative coding problem that you solve for honor points. The beginner&rsquo;s level, level 8, is a good overview of incredibly basic coding concepts. Once you enter your solution you are able to see how others solved the same kata.</p>
-
-<p>&ndash;> <a href="http://www.codewars.com">http://www.codewars.com</a></p>
-
-<p>My username is <strong>dukeran</strong> if you want to add me!</p>
-
-<h5><em>special note: if the same solution was posted by more than two people then I will not site the code.</em></h5>
-
-<p>After going through Chris Pine&rsquo;s <em>Learn to Program</em>  book, here is the solution I came up with:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">boolean_to_string</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</span><span class='line'>          <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="kp">true</span>
-</span><span class='line'><span class="s2">&quot;true&quot;</span>
-</span><span class='line'>          <span class="k">else</span> <span class="n">b</span> <span class="o">==</span> <span class="kp">false</span>
-</span><span class='line'><span class="s2">&quot;false&quot;</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This is a straightforward code which works just fine but doesn&rsquo;t utilize the fundamental concept of Boolean values.</p>
-
-
-		
-		<a href="/blog/2016/02/07/boolean-values/" class="more-link">Read on &rarr;</a>
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
 	</div>
-
-
-<div class="meta">
-	<div class="date">
-
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
 
 
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
 
-
-
-
-  
-
-
-<time datetime="2016-02-07T00:44:33-05:00" pubdate data-updated="true"></time></div>
-	
-
-
-
-
-	
-		<span class="comments"><a href="/blog/2016/02/07/boolean-values//code-for-thought/index.html#disqus_thread">Comments</a></span>
-	
-</div></article>
-
-
-<nav id="pagenavi">
-    
-    
-</nav></div>
+</div>
 	<footer id="footer" class="inner">Copyright &copy; 2016
 
     Kerrie Durham
@@ -273,7 +242,10 @@ Powered by Octopress.
       var disqus_shortname = 'dukeran';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dukeran.github.io/blog/2016/03/02/variables/';
+        var disqus_url = 'http://dukeran.github.io/blog/2016/03/02/variables/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
