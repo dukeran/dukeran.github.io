@@ -10,7 +10,7 @@ footer: true
 ---
 ####Fundamentals of Ones and Zeros
 
-Thanks to a friend of mine, I've recently been doing a lot of Kata on __Codewars__. If you've never done katas on Codewars before, I would _highly, highly, highly_ reccomend it. It's a great site where your competitive nature can get the best of you as you compete with other friends for 'honor'. There are eight levels of difficulty and each kata is a creative coding problem that you solve for honor points. The beginner's level, level 8, is a good overview of incredibly basic coding concepts. Once you enter your solution you are able to see how others solved the same kata. 
+Thanks to a friend of mine, I've recently been doing a lot of Kata on __Codewars__. If you've never done katas on Codewars before, I would _highly, highly, highly_ recommend it. It's a great site where your competitive nature can get the best of you as you compete with other friends for 'honor'. There are eight levels of difficulty and each kata is a creative coding problem that you solve for honor points. The beginner's level, level 8, is a good overview of incredibly basic coding concepts. Once you enter your solution you are able to see how others solved the same kata. 
 
 --> http://www.codewars.com 
 
