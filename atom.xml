@@ -4,7 +4,7 @@
   <title><![CDATA[TechReg]]></title>
   <link href="http://dukeran.github.io/atom.xml" rel="self"/>
   <link href="http://dukeran.github.io/"/>
-  <updated>2016-03-02T09:43:19-05:00</updated>
+  <updated>2016-03-02T11:17:44-05:00</updated>
   <id>http://dukeran.github.io/</id>
   <author>
     <name><![CDATA[Kerrie Durham]]></name>
@@ -20,18 +20,21 @@
     <id>http://dukeran.github.io/blog/2016/03/02/what-to-pack</id>
     <content type="html"><![CDATA[<h4>Dream Come True</h4>
 
-<p>Ever since I was young, I had dreamed about going to the Amazon. Something about the river always made me imagine of adventure - of trekking through the jungle in search of a lost city. My grandfather used to buy me National Geographic magazines when I first learned to read and I remember staring at the pictures and cutting out the ones of the Amazon to tape up all over my wall, to the frustration of my parents. As I got older, My room was covered with world maps, each map marked with circles of where I would someday travel, always a big black line tracing the Amazon.</p>
-
 <div id="container">
 <br>
-<center><img src="http://i.imgur.com/hvoCq6X.png"  alt="Photo Credits to Charlotte Newell" height="300" width="300" style="margin:10px 10px">
+<center><img src="http://i.imgur.com/hvoCq6X.png"  alt="Photo Credits to Charlotte Newell" height="250" width="250" style="margin:10px 10px">
 </center>
 </div>
 
 
+<p>Ever since I was young, I had dreamed about going to the Amazon. Something about the river always made me imagine of adventure - of trekking through the jungle in search of a lost city. My grandfather used to buy me National Geographic magazines when I first learned to read and I remember staring at the pictures and cutting out the ones of the Amazon to tape up all over my wall, to the frustration of my parents. As I got older, My room was covered with world maps, each map marked with circles of where I would someday travel, always a big black line tracing the Amazon.</p>
+
 <p>And there it was. The Amazon.</p>
 
 <p>The section we were flying over was winding, brown, and languid, stretching as far as the eye could see with nothing but tropical canopy to match.</p>
+
+<!--more-->
+
 
 <h5>A few facts about the Amazon:</h5>
 
@@ -39,12 +42,24 @@
 <li>The second longest River in the world, accounts for 1/5 of the world&rsquo;s total river flow</li>
 <li>The Amazon flows through Brazil</li>
 <li>The Amazon is the rainforest&rsquo;s highway, providing transportation, trade, and communication between communities</li>
-<li>Many of the Amazon port cities are only accessable by water or air</li>
+<li>Many of the Amazon port cities are only accessible by water or air</li>
 <li>During the flood season, the Amazon fertilizes the surrounding soil</li>
 <li>The Amazon River is a source of food for the communities living on the banks</li>
 <li>Home of the Amazon river dolphin</li>
 </ul>
 
+
+<p>Thankfully living in Florida prepared Charlotte and I for the humidity that hit us as we disembarked the plane when it landed in Iquitos. The airport was small and there was dust everywhere. We climbed into our first South American rickshaw and gave the driver our hostel&rsquo;s name. With all the dust, dogs, and kids running around in dirty clothes it was hard to believe that Iquitos was once home to rubber barons, an opera house, and great mansions. Some of the mansions still stand today, but only as shadows of their former glory. Those were not necessarily good times for Iquitos, however. The rubber boom of the early 19th century meant wealth but it also meant that many companies such as the Peruvian Amazon Company (rubber company ) horrifically abused workers in the depths of the Amazon. Now, Iquitos serves as one of the main trading hubs of the Amazon, a center for timber, oil and mineral resources. Not to mention, Iquitos has a booming tourist industry as people from all over the world want to catch a glimpse of one of the seven natural wonders of the world; the Amazon River.</p>
+
+<p>The second we registered our names in to the hostel leger, we were ushered into a common room and told to wait a few moments. A older woman from Spain joined us and before long a native from Iquitos introduced himself and gave us a pitch for a three-day adventure into the Amazon. Charlotte kept elbowing me in the ribs because I could hardly keep my eyes open and my head kept falling onto her shoulder. I was exhausted from the red-eye flight to Iquitos &hellip; and from the fact that we hadn&rsquo;t slept the night before because we we had been celebrating the opening of a new club down in Lima with new friends.</p>
+
+<p>Raul, the Iquitian, was from a local travel company geared towards tourists and he told us about piranha fishing, swimming in the amazon, sleeping in hammocks, etc. A trip that sounded honestly amazing to me. Charlotte and I had looked online at possible Amazon tours but the prices had been outrages - ranging anywhere from $400 (if you were lucky) to $800 for a two night, three-day trek into the rainforest. Since our budget was limited, we decided to hold off before deciding on any $400 trek.</p>
+
+<p>Everything Raul said sounded great, but just wait for it&hellip;and there! The price <strong>$500</strong>. Uh huh, no way. I was ready to gather my bags and head up to our rooms for a much needed nap when the lady from Spain, Mari Carmen came into play. She grabbed our hands, told Raul how we were family and that we should receive a discount since the three of us came together. She was nitpicky, arguing that the individual prices for each event would only cost so-and-so and that she might as well hire a native Iquitian to give us a personal tour instead of a local tour company. Little by little Raul lowered the prices until we were looking at $250 each for the entire three days, all meals included, and an extra excursion added on. The three of us jumped on it.</p>
+
+<p>After money and handshakes were transferred (business was done with a word oath and then later with receipts) Mari Carmen winked at us and told us that we owed her one. We sure did!</p>
+
+<p>At this point, both Charlotte and I were exhausted. We grabbed a quick lunch of fried fish in the town plaza and then lazily made our way back to our room to recover from the night before.</p>
 ]]></content>
   </entry>
   
@@ -86,7 +101,7 @@
     <id>http://dukeran.github.io/blog/2016/02/07/boolean-values</id>
     <content type="html"><![CDATA[<h4>Fundamentals of Ones and Zeros</h4>
 
-<p>Thanks to a friend of mine, I&rsquo;ve recently been doing a lot of Kata on <strong>Codewars</strong>. If you&rsquo;ve never done katas on Codewars before, I would <em>highly, highly, highly</em> reccomend it. It&rsquo;s a great site where your competitive nature can get the best of you as you compete with other friends for &lsquo;honor&rsquo;. There are eight levels of difficulty and each kata is a creative coding problem that you solve for honor points. The beginner&rsquo;s level, level 8, is a good overview of incredibly basic coding concepts. Once you enter your solution you are able to see how others solved the same kata.</p>
+<p>Thanks to a friend of mine, I&rsquo;ve recently been doing a lot of Kata on <strong>Codewars</strong>. If you&rsquo;ve never done katas on Codewars before, I would <em>highly, highly, highly</em> recommend it. It&rsquo;s a great site where your competitive nature can get the best of you as you compete with other friends for &lsquo;honor&rsquo;. There are eight levels of difficulty and each kata is a creative coding problem that you solve for honor points. The beginner&rsquo;s level, level 8, is a good overview of incredibly basic coding concepts. Once you enter your solution you are able to see how others solved the same kata.</p>
 
 <p>&ndash;> <a href="http://www.codewars.com">http://www.codewars.com</a></p>
 
@@ -131,9 +146,19 @@
 
 <p>At first I cocked my head and then wiped my glasses. First of all, what does the <code>?</code> mean? and why don&rsquo;t you have to specifically tell ruby that <code>if b = true...</code> How does ruby automatically know to test for true and false?</p>
 
-<p>The program above may seem painfully simple to any programmer worth their salt but to a newbie in the field, it was a confusion fest - especially when it comes to Ruby. I find that as a Linguistics major with no background in coding, many expert programmers assume that these fundamentals are pure common sense. This is not the case for most non-programmers and I want to break everything down step by step.</p>
+<p>The program above may seem painfully simple to any programmer worth their salt but to a newbie in the field, it was a confusionfest - especially when it comes to Ruby. I find that as a Linguistics major with no background in coding, many expert programmers assume that these fundamentals are pure common sense. This is not the case for most non-programmers and I want to break everything down step by step.</p>
 
-<p>-finish-</p>
+<h5>George Boole, the Foundation Layer</h5>
+
+<p>Let&rsquo;s start with George Boole because I always find coding processes/fundamentals easier to swallow when the human element is added to make it a bit more personal. George Boole (1815-1864) was an Eglishman who is credited with laying the foundations for the informational age - the period that marked the shift from Industrial Revolution to what we have today with an economy based on information computerization. Without much formal teaching, he taught himeslf algebra and calculus using mathematics books. He became a prominent member of society and began publishing his own academic articles, lending insight into linear differential equations, invariant theory, and symbolic logic. Also, I learned that Boole is famous for using the term &ldquo;Universe of Discourse&rdquo; which is an important and fundamental concept to the linguistic study of pragmatics and semantics!!
+In an attempt to systematize and categorize Airstotelian logic in order to be ableto extend its range of application, Boole created the beginnings of  Boolean logic.</p>
+
+<h5>So What is the Difference Between Boolean logic and Aristotelian Logic?</h5>
+
+<p>Aristotelian logic, or term logic, begins with the fundamental assumption that propositions are composed of two terms. The term is a part of speech which carries no truth value but instead represents something such as &ldquo;man&rdquo; or &ldquo;cat&rdquo;. The proposition is what consists of two terms, the &ldquo;affirmed&rdquo; or &ldquo;denied&rdquo; and the subject which is capable of true or false. Finally, the syllogism is the inference, or conclusion, that one can make from the premises.
+Propositions can be either <strong>Universal and affirmative</strong>, <strong>Particular and affirmative</strong>, <strong>Universal and negative</strong>, or *Particular and negative**.</p>
+
+<p>Fun Fact: Mary Everest Boole, his wife, was also a self-taught mathematician and was a strong advocate for teaching children Science at a young age and to make mathematics fun for the young. She often helped George Boole on his academic papers and attended conferences with him as well, unheard of for women of the time. She supported the idea that arithmetic was more anthropomorphic instead of purely abstract.</p>
 
 <p>need to have a question mark to denote the boolean theory!!</p>
 ]]></content>
