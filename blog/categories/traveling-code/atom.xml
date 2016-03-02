@@ -4,7 +4,7 @@
   <title><![CDATA[ traveling_code | TechReg]]></title>
   <link href="http://dukeran.github.io/blog/categories/traveling-code/atom.xml" rel="self"/>
   <link href="http://dukeran.github.io/"/>
-  <updated>2016-02-08T12:23:55-05:00</updated>
+  <updated>2016-03-02T09:43:19-05:00</updated>
   <id>http://dukeran.github.io/</id>
   <author>
     <name><![CDATA[Kerrie Durham]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First Glimpse of the Amazon]]></title>
+    <link href="http://dukeran.github.io/blog/2016/03/02/what-to-pack/"/>
+    <updated>2016-03-02T08:50:50-05:00</updated>
+    <id>http://dukeran.github.io/blog/2016/03/02/what-to-pack</id>
+    <content type="html"><![CDATA[<h4>Dream Come True</h4>
+
+<p>Ever since I was young, I had dreamed about going to the Amazon. Something about the river always made me imagine of adventure - of trekking through the jungle in search of a lost city. My grandfather used to buy me National Geographic magazines when I first learned to read and I remember staring at the pictures and cutting out the ones of the Amazon to tape up all over my wall, to the frustration of my parents. As I got older, My room was covered with world maps, each map marked with circles of where I would someday travel, always a big black line tracing the Amazon.</p>
+
+<div id="container">
+<br>
+<center><img src="http://i.imgur.com/hvoCq6X.png"  alt="Photo Credits to Charlotte Newell" height="300" width="300" style="margin:10px 10px">
+</center>
+</div>
+
+
+<p>And there it was. The Amazon.</p>
+
+<p>The section we were flying over was winding, brown, and languid, stretching as far as the eye could see with nothing but tropical canopy to match.</p>
+
+<h5>A few facts about the Amazon:</h5>
+
+<ul>
+<li>The second longest River in the world, accounts for 1/5 of the world&rsquo;s total river flow</li>
+<li>The Amazon flows through Brazil</li>
+<li>The Amazon is the rainforest&rsquo;s highway, providing transportation, trade, and communication between communities</li>
+<li>Many of the Amazon port cities are only accessable by water or air</li>
+<li>During the flood season, the Amazon fertilizes the surrounding soil</li>
+<li>The Amazon River is a source of food for the communities living on the banks</li>
+<li>Home of the Amazon river dolphin</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[From Lima to the Amazon]]></title>
@@ -311,28 +346,6 @@ If anyone is interested in the chromebook, here&rsquo;s the <a href="http://www.
 <p><img src="http://imgur.com/Yu5aRuC.jpg" alt="Thanks Pine!" /></p>
 
 <p>In a few days I will be using another book/source in order to continue learning while in Peru. I definitely still have a lot of qustions that hopefully I&rsquo;ll figure out as I learn more about Ruby, such as what is YAML and why do developers love recursive acronyms so much?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Introduction to the Traveling Code]]></title>
-    <link href="http://dukeran.github.io/blog/2016/01/26/introduction/"/>
-    <updated>2016-01-26T16:56:00-05:00</updated>
-    <id>http://dukeran.github.io/blog/2016/01/26/introduction</id>
-    <content type="html"><![CDATA[<h3>The beginning of <em>Traveling Code</em></h3>
-
-<div id="container">
-<center><img src="http://i.imgur.com/afjR3yl.jpg" alt="The Sahara on camelback" height="200" width="200" style="margin:20px 20px">
-</center>
-</div>
-
-
-<p>Life is full of surprises. Four years ago, if I was told that one day I would be writing a travel blog about coding, I would have laughed. Four years ago I was herding cows in the Atlas mountains in Morocco, living with the Berber people in a tiny village that didn&rsquo;t have running water, let alone internet or computers. Even up to a couple of months ago I hadn&rsquo;t the slightest idea of what coding entailed or what Ruby even was&hellip;</p>
-
-<p>One night, a good friend of mine started pitching the idea of coding over a couple of beers. It was cold outside and the two tankards of Blue Moon had warmed me up to the idea of learning a computer language. After all, I thought, I am a linguistics student, learning a computer language can&rsquo;t be all that difficult after my experiences learning languages such as Chinese and Russian. Boy, was I wrong. <!--more-->
-After just a few weeks with my <em>Learning to Program</em> by Chris Pine, I quickly discovered that learning to code is a whole different animal. Not only are you learning how to create code in order to communicate to the computer but you also have to learn how it thinks. I no longer consider sorting words in alphabetical order to be an easy task. Things that I had taken for granted such as defining &lsquo;word&rsquo; and the idea of compiling a list has had me pulling my hair out as my code would fail again and again. But it is through these failures that I have learned what I know about precious Ruby and have come to realize that so far I am actually thoroughly enjoying myself.</p>
-
-<p>In less than a month I&rsquo;ll be doing what I was born to do; traveling. Every summer and every chance I get I pack my bag and head out to new country to explore life and all it has to offer from the riches of Chinese five star hotels to the rustic Moroccan village. Except this time it&rsquo;s going to be a bit different and my bag will weigh just a pound heavier as I travel with this tiny Dell Chromebook throughout the roads of Peru and Ecuador. While there, I&rsquo;m going to be learning to code everyday and writing about my experiences at least once a week. I&rsquo;m only at the initial stages of learning how to code and the more I study and practice the more I realize that there is so much still to learn. I&rsquo;m writing this blog as a way to keep myself disciplined and to track my progression as I conitnue to learn Ruby and travel. If you&rsquo;re reading this I hope you enjoy what follows and I would appreciate feedback since this is a new experience for me!</p>
 ]]></content>
   </entry>
   
