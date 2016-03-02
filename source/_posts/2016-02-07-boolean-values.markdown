@@ -41,9 +41,18 @@ end
 ```
 At first I cocked my head and then wiped my glasses. First of all, what does the ```?``` mean? and why don't you have to specifically tell ruby that `if b = true...` How does ruby automatically know to test for true and false? 
 
-The program above may seem painfully simple to any programmer worth their salt but to a newbie in the field, it was a confusion fest - especially when it comes to Ruby. I find that as a Linguistics major with no background in coding, many expert programmers assume that these fundamentals are pure common sense. This is not the case for most non-programmers and I want to break everything down step by step. 
+The program above may seem painfully simple to any programmer worth their salt but to a newbie in the field, it was a confusionfest - especially when it comes to Ruby. I find that as a Linguistics major with no background in coding, many expert programmers assume that these fundamentals are pure common sense. This is not the case for most non-programmers and I want to break everything down step by step. 
 
--finish-
+#####George Boole, the Foundation Layer
+Let's start with George Boole because I always find coding processes/fundamentals easier to swallow when the human element is added to make it a bit more personal. George Boole (1815-1864) was an Eglishman who is credited with laying the foundations for the informational age - the period that marked the shift from Industrial Revolution to what we have today with an economy based on information computerization. Without much formal teaching, he taught himeslf algebra and calculus using mathematics books. He became a prominent member of society and began publishing his own academic articles, lending insight into linear differential equations, invariant theory, and symbolic logic. Also, I learned that Boole is famous for using the term "Universe of Discourse" which is an important and fundamental concept to the linguistic study of pragmatics and semantics!!
+In an attempt to systematize and categorize Airstotelian logic in order to be ableto extend its range of application, Boole created the beginnings of  Boolean logic. 
 
+#####So What is the Difference Between Boolean logic and Aristotelian Logic? 
+
+Aristotelian logic, or term logic, begins with the fundamental assumption that propositions are composed of two terms. The term is a part of speech which carries no truth value but instead represents something such as "man" or "cat". The proposition is what consists of two terms, the "affirmed" or "denied" and the subject which is capable of true or false. Finally, the syllogism is the inference, or conclusion, that one can make from the premises. 
+Propositions can be either **Universal and affirmative**, **Particular and affirmative**, **Universal and negative**, or *Particular and negative**. 
+
+
+Fun Fact: Mary Everest Boole, his wife, was also a self-taught mathematician and was a strong advocate for teaching children Science at a young age and to make mathematics fun for the young. She often helped George Boole on his academic papers and attended conferences with him as well, unheard of for women of the time. She supported the idea that arithmetic was more anthropomorphic instead of purely abstract. 
 
 need to have a question mark to denote the boolean theory!!
