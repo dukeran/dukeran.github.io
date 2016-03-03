@@ -4,7 +4,7 @@
   <title><![CDATA[ code-for-thought | TechReg]]></title>
   <link href="http://dukeran.github.io/blog/categories/code-for-thought/atom.xml" rel="self"/>
   <link href="http://dukeran.github.io/"/>
-  <updated>2016-03-02T17:37:02-05:00</updated>
+  <updated>2016-03-03T00:11:53-05:00</updated>
   <id>http://dukeran.github.io/</id>
   <author>
     <name><![CDATA[Kerrie Durham]]></name>
@@ -56,21 +56,22 @@ end</p>
 
 <p>(1..size).each do |number|</p>
 
-<p>because size is within the parenthesis, Ruby knows that size is going to be a variable for a number. The &ldquo;number&rdquo; put into &ldquo;| |&rdquo; symbology is giving a variable name to what is inside the parenthesis.
+<p>because size is within the parenthesis, Ruby knows that size is going to be a variable for a number. The &ldquo;number&rdquo; put into &ldquo;| |&rdquo; symbolism is giving a variable name to what is inside the parenthesis.
 I figured that for every other number I would want a &ldquo;1&rdquo; and then a &ldquo;0&rdquo; so with this dichotomy I figured I could equate it to even and odds. For every odd I would assign a &ldquo;1&rdquo; value and for every even I would assign a &ldquo;0&rdquo; value. Mind you, I was writing anything that came to mind and erasing and cleaning up things as I went. At this point I removed the base = &ldquo;1&rdquo; since I would be no longer needing it if my array started at 1 and I could assign a &ldquo;1&rdquo; on the 1 value.</p>
 
 <p>after running a few tests, I came up with the following:</p>
 
-<p>def stringy(size)
+<pre><code class="ruby">def stringy(size)
   (1..size).each do |number|
-  if number.odd?
-    puts &ldquo;1&rdquo;
-  else<br/>
-    puts &ldquo;0&rdquo;
+  if number.odd? 
+    puts "1"
+  else  
+    puts "0"
   end
   end
 end
-puts stringy(5)</p>
+puts stringy(5)
+</code></pre>
 
 <p>This did not work quite how I wanted it to:</p>
 
@@ -82,7 +83,35 @@ puts stringy(5)</p>
 1...5  
 </code></pre>
 
-<p>First of all, what was with the 1..5? I was confused and so I asked a friend. Ruby, when not given a specific task, will regurgitate as much as she can, trying to give you as much information as possible unless specified otherwise. Since nothing was specified between the end of the <code>if</code>, <code>else</code> and the <code>end</code> of the defining method, then Ruby told you the parameters of what she did was between 1 and 5, hence the 1..5. Another thing to note is that Ruby gave us the 1&rsquo;s and 0&rsquo;s we were looking for, but not in a consecutive line.</p>
+<p>First of all, what was with the <code>1..5</code>? I was confused and so I asked a friend. Ruby, when not given a specific task, will regurgitate as much as she can, trying to give you as much information as possible unless specified otherwise. Since nothing was specified between the end of the <code>if</code>, <code>else</code> and the <code>end</code> of the defining method, then ruby told you the parameters of what she did was between 1 and 5, hence the 1..5. Another thing to note is that Ruby gave us the 1&rsquo;s and 0&rsquo;s we were looking for, but not in a consecutive line. It turns out that ruby will print out each variable on its own line unless specifically told not to.</p>
+
+<p>The next round I specifically told ruby to print the variables on the same line:</p>
+
+<pre><code class="ruby">def stringy(size)
+  string = ''
+  size.times do |number|
+    if number.even?
+      string = string + '1'
+    else
+      string = string + '0'
+    end
+  end
+  string
+end
+</code></pre>
+
+<p>Also, what is significant about this code compared to the last code I tried is that in the first code I applied a function to the range and in the second code I used a method and applied it to a variable. For example in the first code <code>(1..size).each do |number|</code> the <code>.each</code> applies to the inclusive range, applying the function to each number in the range.
+In the second code in the third line <code>size.times do |n|</code>, the <code>.times</code>  function means that the method will perform that function as many times as you specify in the <code>n</code> variable.
+In this case, there isn&rsquo;t much difference between the two except that <code>.times</code> can be applied to a stand-alone variable while <code>.each</code> <em>has to</em> apply to more than one variable. It is perfectly acceptable to write <code> (1..size).each do |number|</code> in the second code on line 3 in place of what is there.</p>
+
+<p>A few other solutions were:</p>
+
+<pre><code class="ruby">def stringy(size)
+  (1..size).map { |number| number.even? ? '0' : '1' }.join('')
+end
+</code></pre>
+
+<p>In this case I learned something knew. I hadn&rsquo;t seen the <code>.map</code> function before. <code>.map</code> applies a function onto every single member of that range. The curly brackets are a shorthand for <code>do</code>/<code>end</code>, allowing the entire method to be on one line, shortening the code. The <code>?</code> is calling up the Boolean method (see previous post) and the <code>:</code> act as an OR method.</p>
 ]]></content>
   </entry>
   
