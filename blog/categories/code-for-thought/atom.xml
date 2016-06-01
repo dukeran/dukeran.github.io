@@ -4,7 +4,7 @@
   <title><![CDATA[ code-for-thought | TechReg]]></title>
   <link href="http://dukeran.github.io/blog/categories/code-for-thought/atom.xml" rel="self"/>
   <link href="http://dukeran.github.io/"/>
-  <updated>2016-03-03T00:11:53-05:00</updated>
+  <updated>2016-05-31T22:12:37-04:00</updated>
   <id>http://dukeran.github.io/</id>
   <author>
     <name><![CDATA[Kerrie Durham]]></name>
@@ -14,13 +14,177 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Variables]]></title>
+    <title type="html"><![CDATA[Setting Up Jekyll on Github Project Page]]></title>
+    <link href="http://dukeran.github.io/blog/2016/05/31/setting-up-jekyll-on-github-project-page/"/>
+    <updated>2016-05-31T22:08:58-04:00</updated>
+    <id>http://dukeran.github.io/blog/2016/05/31/setting-up-jekyll-on-github-project-page</id>
+    <content type="html"><![CDATA[<h3>How to set up pre-made Jekyll theme to your created Github Project Pages</h3>
+
+<p>Like most projects I begin, I immediately faced programming trouble and a daunting challenge that made me second-guess my original enthusiasm.</p>
+
+<!--more-->
+
+
+<p>You&rsquo;re given the following:</p>
+
+<p>def stringy(size)
+ (insert your code here)
+end</p>
+
+<p>I first thought about how to approach the problem in the most simple way possible. How could I break it down so that the string starting at one?</p>
+
+<p>my first thought was to start at: &lsquo;&rsquo;&lsquo;base = &ldquo;1&rdquo;&rsquo;&lsquo;&rsquo; and go from there. I recalled the first method I internalized;</p>
+
+<p>(1..size).each do |number|</p>
+
+<p>because size is within the parenthesis, Ruby knows that size is going to be a variable for a number. The &ldquo;number&rdquo; put into &ldquo;| |&rdquo; symbolism is giving a variable name to what is inside the parenthesis.
+I figured that for every other number I would want a &ldquo;1&rdquo; and then a &ldquo;0&rdquo; so with this dichotomy I figured I could equate it to even and odds. For every odd I would assign a &ldquo;1&rdquo; value and for every even I would assign a &ldquo;0&rdquo; value. Mind you, I was writing anything that came to mind and erasing and cleaning up things as I went. At this point I removed the base = &ldquo;1&rdquo; since I would be no longer needing it if my array started at 1 and I could assign a &ldquo;1&rdquo; on the 1 value.</p>
+
+<p>after running a few tests, I came up with the following:</p>
+
+<pre><code class="ruby">def stringy(size)
+  (1..size).each do |number|
+  if number.odd? 
+    puts "1"
+  else  
+    puts "0"
+  end
+  end
+end
+puts stringy(5)
+</code></pre>
+
+<p>This did not work quite how I wanted it to:</p>
+
+<pre><code class="ruby">1  
+0  
+1  
+0  
+1  
+1...5  
+</code></pre>
+
+<p>First of all, what was with the <code>1..5</code>? I was confused and so I asked a friend. Ruby, when not given a specific task, will regurgitate as much as she can, trying to give you as much information as possible unless specified otherwise. Since nothing was specified between the end of the <code>if</code>, <code>else</code> and the <code>end</code> of the defining method, then ruby told you the parameters of what she did was between 1 and 5, hence the 1..5. Another thing to note is that Ruby gave us the 1&rsquo;s and 0&rsquo;s we were looking for, but not in a consecutive line. It turns out that ruby will print out each variable on its own line unless specifically told not to.</p>
+
+<p>The next round I specifically told ruby to print the variables on the same line:</p>
+
+<pre><code class="ruby">def stringy(size)
+  string = ''
+  size.times do |number|
+    if number.even?
+      string = string + '1'
+    else
+      string = string + '0'
+    end
+  end
+  string
+end
+</code></pre>
+
+<p>Also, what is significant about this code compared to the last code I tried is that in the first code I applied a function to the range and in the second code I used a method and applied it to a variable. For example in the first code <code>(1..size).each do |number|</code> the <code>.each</code> applies to the inclusive range, applying the function to each number in the range.
+In the second code in the third line <code>size.times do |n|</code>, the <code>.times</code>  function means that the method will perform that function as many times as you specify in the <code>n</code> variable.
+In this case, there isn&rsquo;t much difference between the two except that <code>.times</code> can be applied to a stand-alone variable while <code>.each</code> <em>has to</em> apply to more than one variable. It is perfectly acceptable to write <code> (1..size).each do |number|</code> in the second code on line 3 in place of what is there.</p>
+
+<p>A few other solutions were:</p>
+
+<pre><code class="ruby">def stringy(size)
+  (1..size).map { |number| number.even? ? '0' : '1' }.join('')
+end
+</code></pre>
+
+<p>In this case I learned something knew. I hadn&rsquo;t seen the <code>.map</code> function before. <code>.map</code> applies a function onto every single member of that range. The curly brackets are a shorthand for <code>do</code>/<code>end</code>, allowing the entire method to be on one line, shortening the code. The <code>?</code> is calling up the Boolean method (see previous post) and the <code>:</code> act as an OR method.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up Jekyll on Github Project Pages]]></title>
+    <link href="http://dukeran.github.io/blog/2016/05/30/jekyll-github-pages/"/>
+    <updated>2016-05-30T18:21:22-04:00</updated>
+    <id>http://dukeran.github.io/blog/2016/05/30/jekyll-github-pages</id>
+    <content type="html"><![CDATA[<h3>How to set up pre-made Jekyll theme to your created Github Project Pages</h3>
+
+<p>Like most projects I begin, I immediately faced programming trouble and a daunting challenge that made me second-guess my original enthusiasm.</p>
+
+<!--more-->
+
+
+<p>You&rsquo;re given the following:</p>
+
+<p>def stringy(size)
+ (insert your code here)
+end</p>
+
+<p>I first thought about how to approach the problem in the most simple way possible. How could I break it down so that the string starting at one?</p>
+
+<p>my first thought was to start at: &lsquo;&rsquo;&lsquo;base = &ldquo;1&rdquo;&rsquo;&lsquo;&rsquo; and go from there. I recalled the first method I internalized;</p>
+
+<p>(1..size).each do |number|</p>
+
+<p>because size is within the parenthesis, Ruby knows that size is going to be a variable for a number. The &ldquo;number&rdquo; put into &ldquo;| |&rdquo; symbolism is giving a variable name to what is inside the parenthesis.
+I figured that for every other number I would want a &ldquo;1&rdquo; and then a &ldquo;0&rdquo; so with this dichotomy I figured I could equate it to even and odds. For every odd I would assign a &ldquo;1&rdquo; value and for every even I would assign a &ldquo;0&rdquo; value. Mind you, I was writing anything that came to mind and erasing and cleaning up things as I went. At this point I removed the base = &ldquo;1&rdquo; since I would be no longer needing it if my array started at 1 and I could assign a &ldquo;1&rdquo; on the 1 value.</p>
+
+<p>after running a few tests, I came up with the following:</p>
+
+<pre><code class="ruby">def stringy(size)
+  (1..size).each do |number|
+  if number.odd? 
+    puts "1"
+  else  
+    puts "0"
+  end
+  end
+end
+puts stringy(5)
+</code></pre>
+
+<p>This did not work quite how I wanted it to:</p>
+
+<pre><code class="ruby">1  
+0  
+1  
+0  
+1  
+1...5  
+</code></pre>
+
+<p>First of all, what was with the <code>1..5</code>? I was confused and so I asked a friend. Ruby, when not given a specific task, will regurgitate as much as she can, trying to give you as much information as possible unless specified otherwise. Since nothing was specified between the end of the <code>if</code>, <code>else</code> and the <code>end</code> of the defining method, then ruby told you the parameters of what she did was between 1 and 5, hence the 1..5. Another thing to note is that Ruby gave us the 1&rsquo;s and 0&rsquo;s we were looking for, but not in a consecutive line. It turns out that ruby will print out each variable on its own line unless specifically told not to.</p>
+
+<p>The next round I specifically told ruby to print the variables on the same line:</p>
+
+<pre><code class="ruby">def stringy(size)
+  string = ''
+  size.times do |number|
+    if number.even?
+      string = string + '1'
+    else
+      string = string + '0'
+    end
+  end
+  string
+end
+</code></pre>
+
+<p>Also, what is significant about this code compared to the last code I tried is that in the first code I applied a function to the range and in the second code I used a method and applied it to a variable. For example in the first code <code>(1..size).each do |number|</code> the <code>.each</code> applies to the inclusive range, applying the function to each number in the range.
+In the second code in the third line <code>size.times do |n|</code>, the <code>.times</code>  function means that the method will perform that function as many times as you specify in the <code>n</code> variable.
+In this case, there isn&rsquo;t much difference between the two except that <code>.times</code> can be applied to a stand-alone variable while <code>.each</code> <em>has to</em> apply to more than one variable. It is perfectly acceptable to write <code> (1..size).each do |number|</code> in the second code on line 3 in place of what is there.</p>
+
+<p>A few other solutions were:</p>
+
+<pre><code class="ruby">def stringy(size)
+  (1..size).map { |number| number.even? ? '0' : '1' }.join('')
+end
+</code></pre>
+
+<p>In this case I learned something knew. I hadn&rsquo;t seen the <code>.map</code> function before. <code>.map</code> applies a function onto every single member of that range. The curly brackets are a shorthand for <code>do</code>/<code>end</code>, allowing the entire method to be on one line, shortening the code. The <code>?</code> is calling up the Boolean method (see previous post) and the <code>:</code> act as an OR method.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning About Variable Scope]]></title>
     <link href="http://dukeran.github.io/blog/2016/03/02/variables/"/>
     <updated>2016-03-02T17:21:22-05:00</updated>
     <id>http://dukeran.github.io/blog/2016/03/02/variables</id>
-    <content type="html"><![CDATA[<h2>Learning About Variable Scope</h2>
-
-<h3>Hardcore Parcour</h3>
+    <content type="html"><![CDATA[<h3>Hardcore Parcour</h3>
 
 <p>After going through three tutorial books on Ruby, Sinatra, and Ruby on Rails (one each respectively) I still struggled with my first kata from Code Wars.
 Code Wars (give a brief description)</p>
@@ -159,43 +323,17 @@ end
 
 <h5>George Boole, the Foundation Layer</h5>
 
-<p>Let&rsquo;s start with George Boole because I always find coding processes/fundamentals easier to swallow when the human element is added to make it a bit more personal. George Boole (1815-1864) was an Englishman who is credited with laying the foundations for the informational age - the period that marked the shift from Industrial Revolution to what we have today with an economy based on information computerization. Without much formal teaching, he taught himself algebra and calculus using mathematics books. He became a prominent member of society and began publishing his own academic articles, lending insight into linear differential equations, invariant theory, and symbolic logic. Also, I learned that Boole is famous for using the term &ldquo;Universe of Discourse&rdquo; which is an important and fundamental concept to the linguistic study of pragmatics and semantics!!
-In an attempt to systematize and categorize Airstotelian logic in order to be able to extend its range of application, Boole created the beginnings of  Boolean logic.</p>
+<p>Let&rsquo;s start with George Boole because I always find coding processes/fundamentals easier to swallow when the human element is added to make it a bit more personal. George Boole (1815-1864) was an Eglishman who is credited with laying the foundations for the informational age - the period that marked the shift from Industrial Revolution to what we have today with an economy based on information computerization. Without much formal teaching, he taught himeslf algebra and calculus using mathematics books. He became a prominent member of society and began publishing his own academic articles, lending insight into linear differential equations, invariant theory, and symbolic logic. Also, I learned that Boole is famous for using the term &ldquo;Universe of Discourse&rdquo; which is an important and fundamental concept to the linguistic study of pragmatics and semantics!!
+In an attempt to systematize and categorize Airstotelian logic in order to be ableto extend its range of application, Boole created the beginnings of  Boolean logic.</p>
 
 <h5>So What is the Difference Between Boolean logic and Aristotelian Logic?</h5>
 
 <p>Aristotelian logic, or term logic, begins with the fundamental assumption that propositions are composed of two terms. The term is a part of speech which carries no truth value but instead represents something such as &ldquo;man&rdquo; or &ldquo;cat&rdquo;. The proposition is what consists of two terms, the &ldquo;affirmed&rdquo; or &ldquo;denied&rdquo; and the subject which is capable of true or false. Finally, the syllogism is the inference, or conclusion, that one can make from the premises.
-Propositions can be either <em>universal and affirmative</em>, <em>particular and affirmative</em>, <em>universal and negative</em>, or <em>particular and negative</em>. An important aspect to note is that in term logic, a universal proposition implies existence of its subject, but the particular term does not. Through term logic, there is a diagram called the &ldquo;square of opposition&rdquo; which represents the ways that the four proposition types are logically related to each other.</p>
+Propositions can be either <strong>Universal and affirmative</strong>, <strong>Particular and affirmative</strong>, <strong>Universal and negative</strong>, or *Particular and negative**.</p>
 
-<p>Boolean logic is when term logic is taken and put into an algebraic form. One of the most important differences is that Boole argued that universal terms do not necessarily imply existence and that particular claims do imply existence. This changed the &ldquo;square of opposition&rdquo; to what we have today; the &ldquo;modern square of opposition&rdquo;.
-My question was, why is this important? My removing universal implies existence, it opened the field to a much wider range of study and exploration of theory.</p>
+<p>Fun Fact: Mary Everest Boole, his wife, was also a self-taught mathematician and was a strong advocate for teaching children Science at a young age and to make mathematics fun for the young. She often helped George Boole on his academic papers and attended conferences with him as well, unheard of for women of the time. She supported the idea that arithmetic was more anthropomorphic instead of purely abstract.</p>
 
-<p>Boole wanted to explore the <strong>truth value</strong> of statements in logic or the truth value of variables in algebra. He denoted truth values to 1 and 0 and broke down sentences to p and q forms variables. Boole&rsquo;s main operations were the conjunction <em>and</em>, the disjunction <em>or</em>, and the negation <em>not</em>. These were the main functions while everything else served as either true or false. Using this method, Boole was able to create more proofs that expanded the understanding of logic, algebra, statistics, and mathematics.</p>
-
-<h5>The Value of Boolean Logic Today</h5>
-
-<p>To me, the amazing thing is that whether its logic or algebra, Boole&rsquo;s method works for both. By breaking down propositions and mathematical problems to its most basic element of <em>true</em> or <em>false</em>, we have been able to create some of the most advanced technologies that have launched us into the information age.</p>
-
-<p>Computers encode two-value Boolean logic in their circuit designs where zero volts represent the Boolean 0 and five volts represent the Boolean 1. All computers function this way, transmitting information and tasks using Boolean values that make computing possible. It is through Boolean logic that computers add, subtract, multiply, divide, and perform the operations that we use them for on a daily basis.</p>
-
-<p>Even search engines employ Boolean logic! Each item you type into a search bar is considered a set or element, white space is <em>and</em>, &ldquo;or&rdquo; represents <em>or</em> and the minus sign represents <em>not</em>.</p>
-
-<h5>Back to the Code</h5>
-
-<p>So how does the following code work?</p>
-
-<pre><code class="ruby ">def boolean_to_string(b)
-  b ? "true" : "false"
-end
-</code></pre>
-
-<p>Here, by stating <code>boolean_to_string(b)</code>, you&rsquo;re <em>def</em>ining a method that ruby will use on the variable &lsquo;b&rsquo;. <code>boolean_to_string</code> actually carries no semantic meaning other than providing a name to the method that is about to be defined, making it easy for us humans to keep track of all the methods that ruby is employing.
-<code>b ?</code> , whenever the <code>?</code> is used, ruby knows to imply Boolean logic, aka the value is either going to be <em>true</em> or <em>false</em>.
-<code>"true" : "fase"</code> in this case, the &ldquo;:&rdquo; represents the <em>or</em> operation. Print either &ldquo;true&rdquo; OR &ldquo;false&rdquo;.
-Then <code>end</code> to close the method.
-That&rsquo;s it! It&rsquo;s so simple that it&rsquo;s beautiful.</p>
-
-<p><em>Fun Fact: Mary Everest Boole, his wife, was also a self-taught mathematician and was a strong advocate for teaching children Science at a young age and to make mathematics fun for the young. She often helped George Boole on his academic papers and attended conferences with him as well, unheard of for women of the time. She supported the idea that arithmetic was more anthropomorphic instead of purely abstract.</em></p>
+<p>need to have a question mark to denote the boolean theory!!</p>
 ]]></content>
   </entry>
   

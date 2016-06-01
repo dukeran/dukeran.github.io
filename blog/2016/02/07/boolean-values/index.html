@@ -153,47 +153,17 @@ $(document).ready(
 
 <h5>George Boole, the Foundation Layer</h5>
 
-<p>Let&rsquo;s start with George Boole because I always find coding processes/fundamentals easier to swallow when the human element is added to make it a bit more personal. George Boole (1815-1864) was an Englishman who is credited with laying the foundations for the informational age - the period that marked the shift from Industrial Revolution to what we have today with an economy based on information computerization. Without much formal teaching, he taught himself algebra and calculus using mathematics books. He became a prominent member of society and began publishing his own academic articles, lending insight into linear differential equations, invariant theory, and symbolic logic. Also, I learned that Boole is famous for using the term &ldquo;Universe of Discourse&rdquo; which is an important and fundamental concept to the linguistic study of pragmatics and semantics!!
-In an attempt to systematize and categorize Airstotelian logic in order to be able to extend its range of application, Boole created the beginnings of  Boolean logic.</p>
+<p>Let&rsquo;s start with George Boole because I always find coding processes/fundamentals easier to swallow when the human element is added to make it a bit more personal. George Boole (1815-1864) was an Eglishman who is credited with laying the foundations for the informational age - the period that marked the shift from Industrial Revolution to what we have today with an economy based on information computerization. Without much formal teaching, he taught himeslf algebra and calculus using mathematics books. He became a prominent member of society and began publishing his own academic articles, lending insight into linear differential equations, invariant theory, and symbolic logic. Also, I learned that Boole is famous for using the term &ldquo;Universe of Discourse&rdquo; which is an important and fundamental concept to the linguistic study of pragmatics and semantics!!
+In an attempt to systematize and categorize Airstotelian logic in order to be ableto extend its range of application, Boole created the beginnings of  Boolean logic.</p>
 
 <h5>So What is the Difference Between Boolean logic and Aristotelian Logic?</h5>
 
 <p>Aristotelian logic, or term logic, begins with the fundamental assumption that propositions are composed of two terms. The term is a part of speech which carries no truth value but instead represents something such as &ldquo;man&rdquo; or &ldquo;cat&rdquo;. The proposition is what consists of two terms, the &ldquo;affirmed&rdquo; or &ldquo;denied&rdquo; and the subject which is capable of true or false. Finally, the syllogism is the inference, or conclusion, that one can make from the premises.
-Propositions can be either <em>universal and affirmative</em>, <em>particular and affirmative</em>, <em>universal and negative</em>, or <em>particular and negative</em>. An important aspect to note is that in term logic, a universal proposition implies existence of its subject, but the particular term does not. Through term logic, there is a diagram called the &ldquo;square of opposition&rdquo; which represents the ways that the four proposition types are logically related to each other.</p>
+Propositions can be either <strong>Universal and affirmative</strong>, <strong>Particular and affirmative</strong>, <strong>Universal and negative</strong>, or *Particular and negative**.</p>
 
-<p>Boolean logic is when term logic is taken and put into an algebraic form. One of the most important differences is that Boole argued that universal terms do not necessarily imply existence and that particular claims do imply existence. This changed the &ldquo;square of opposition&rdquo; to what we have today; the &ldquo;modern square of opposition&rdquo;.
-My question was, why is this important? My removing universal implies existence, it opened the field to a much wider range of study and exploration of theory.</p>
+<p>Fun Fact: Mary Everest Boole, his wife, was also a self-taught mathematician and was a strong advocate for teaching children Science at a young age and to make mathematics fun for the young. She often helped George Boole on his academic papers and attended conferences with him as well, unheard of for women of the time. She supported the idea that arithmetic was more anthropomorphic instead of purely abstract.</p>
 
-<p>Boole wanted to explore the <strong>truth value</strong> of statements in logic or the truth value of variables in algebra. He denoted truth values to 1 and 0 and broke down sentences to p and q forms variables. Boole&rsquo;s main operations were the conjunction <em>and</em>, the disjunction <em>or</em>, and the negation <em>not</em>. These were the main functions while everything else served as either true or false. Using this method, Boole was able to create more proofs that expanded the understanding of logic, algebra, statistics, and mathematics.</p>
-
-<h5>The Value of Boolean Logic Today</h5>
-
-<p>To me, the amazing thing is that whether its logic or algebra, Boole&rsquo;s method works for both. By breaking down propositions and mathematical problems to its most basic element of <em>true</em> or <em>false</em>, we have been able to create some of the most advanced technologies that have launched us into the information age.</p>
-
-<p>Computers encode two-value Boolean logic in their circuit designs where zero volts represent the Boolean 0 and five volts represent the Boolean 1. All computers function this way, transmitting information and tasks using Boolean values that make computing possible. It is through Boolean logic that computers add, subtract, multiply, divide, and perform the operations that we use them for on a daily basis.</p>
-
-<p>Even search engines employ Boolean logic! Each item you type into a search bar is considered a set or element, white space is <em>and</em>, &ldquo;or&rdquo; represents <em>or</em> and the minus sign represents <em>not</em>.</p>
-
-<h5>Back to the Code</h5>
-
-<p>So how does the following code work?</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">boolean_to_string</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</span><span class='line'>  <span class="n">b</span> <span class="p">?</span> <span class="s2">&quot;true&quot;</span> <span class="p">:</span> <span class="s2">&quot;false&quot;</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here, by stating <code>boolean_to_string(b)</code>, you&rsquo;re <em>def</em>ining a method that ruby will use on the variable &lsquo;b&rsquo;. <code>boolean_to_string</code> actually carries no semantic meaning other than providing a name to the method that is about to be defined, making it easy for us humans to keep track of all the methods that ruby is employing.
-<code>b ?</code> , whenever the <code>?</code> is used, ruby knows to imply Boolean logic, aka the value is either going to be <em>true</em> or <em>false</em>.
-<code>"true" : "fase"</code> in this case, the &ldquo;:&rdquo; represents the <em>or</em> operation. Print either &ldquo;true&rdquo; OR &ldquo;false&rdquo;.
-Then <code>end</code> to close the method.
-That&rsquo;s it! It&rsquo;s so simple that it&rsquo;s beautiful.</p>
-
-<p><em>Fun Fact: Mary Everest Boole, his wife, was also a self-taught mathematician and was a strong advocate for teaching children Science at a young age and to make mathematics fun for the young. She often helped George Boole on his academic papers and attended conferences with him as well, unheard of for women of the time. She supported the idea that arithmetic was more anthropomorphic instead of purely abstract.</em></p>
+<p>need to have a question mark to denote the boolean theory!!</p>
 </div>
 
 

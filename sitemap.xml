@@ -1,72 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://dukeran.github.io/blog/2016/03/02/variables/</loc>
-    <lastmod>2016-03-02T17:21:22-05:00</lastmod>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/2016/03/02/what-to-pack/</loc>
-    <lastmod>2016-03-02T08:50:50-05:00</lastmod>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/2016/02/08/virtual-cats/</loc>
-    <lastmod>2016-02-08T11:18:32-05:00</lastmod>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/2016/02/07/boolean-values/</loc>
-    <lastmod>2016-02-07T00:44:33-05:00</lastmod>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/2016/02/03/the-adventure-begins/</loc>
-    <lastmod>2016-02-03T18:56:00-05:00</lastmod>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/2016/02/03/upcoming-trip-to-south-america/</loc>
-    <lastmod>2016-02-03T17:56:00-05:00</lastmod>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/2016/02/03/my-arsenal/</loc>
-    <lastmod>2016-02-03T16:56:00-05:00</lastmod>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/2016/01/26/introduction/</loc>
-    <lastmod>2016-01-26T16:56:00-05:00</lastmod>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/2016/01/23/nanowrimo-introduction/</loc>
-    <lastmod>2016-01-23T12:22:19-05:00</lastmod>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/nanowrimo/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/archives/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/code-for-thought/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/archives/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/traveling-code/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/about/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/categories/nanowrimo/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/categories/traveling-code/</loc>
-  </url>
-  <url>
-    <loc>http://dukeran.github.io/blog/categories/code-for-thought/</loc>
-  </url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/05/31/setting-up-jekyll-on-github-project-page/</loc>
+<lastmod>2016-05-31T22:08:58-04:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/05/30/jekyll-github-pages/</loc>
+<lastmod>2016-05-30T18:21:22-04:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/03/02/variables/</loc>
+<lastmod>2016-03-02T17:21:22-05:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/03/02/what-to-pack/</loc>
+<lastmod>2016-03-02T08:50:50-05:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/02/08/virtual-cats/</loc>
+<lastmod>2016-02-08T11:18:32-05:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/02/07/boolean-values/</loc>
+<lastmod>2016-02-07T00:44:33-05:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/02/03/the-adventure-begins/</loc>
+<lastmod>2016-02-03T18:56:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/02/03/upcoming-trip-to-south-america/</loc>
+<lastmod>2016-02-03T17:56:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/02/03/my-arsenal/</loc>
+<lastmod>2016-02-03T16:56:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/01/26/introduction/</loc>
+<lastmod>2016-01-26T16:56:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/2016/01/23/nanowrimo-introduction/</loc>
+<lastmod>2016-01-23T12:22:19-05:00</lastmod>
+</url>
+<url>
+<loc>http://dukeran.github.io/nanowrimo/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/archives/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/code-for-thought/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/archives/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/traveling-code/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/about/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/categories/nanowrimo/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/categories/traveling-code/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/blog/categories/code-for-thought/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/posts/2/</loc>
+</url>
 </urlset>
