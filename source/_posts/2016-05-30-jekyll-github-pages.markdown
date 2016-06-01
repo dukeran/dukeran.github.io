@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Learning About Variable Scope"
-date: 2016-03-02 17:21:22 -0500
+title: "Setting Up Jekyll on Github Project Pages"
+date: 2016-05-30 17:21:22 -0500
 categories: code-for-thought
 comments: true
 sharing: true
@@ -10,28 +10,10 @@ footer: true
 ---
 
 
-###Hardcore Parcour  
+###How to set up pre-made Jekyll theme to your created Github Project Pages 
 
-After going through three tutorial books on Ruby, Sinatra, and Ruby on Rails (one each respectively) I still struggled with my first kata from Code Wars. 
-Code Wars (give a brief description)
+Like most projects I begin, I immediately faced programming trouble and a daunting challenge that made me second-guess my original enthusiasm. 
 
-The name of the kata is Stringy Strings and it has very straightforward instructions; 
-
->write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
-
->the string should start with a 1.
-
->a string with size 6 should return :'101010'.
-
->with size 4 should return : '1010'.
-
->with size 12 should return : '101010101010'.
-
->The size will always be positive and will only use whole numbers
-
-
-
-I have to admit, I was at quite a loss - a feeling that was incredibly frustrating. 
 
 <!--more-->
 
