@@ -1,0 +1,254 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>What Went Wrong With Postgres  | TechReg</title>
+
+<meta name="author" content="Kerrie Durham"> 
+
+<meta name="description" content="A playground for my imagination and thoughts."> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="TechReg" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+
+	
+</head>
+
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">TechReg</a></h1>
+<h4>building projects one day at a time</h4>
+<nav id="main-nav"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/code-for-thought/">Code For Thought</a></li>
+	<li><a href="/traveling-code/">Traveling Code</a></li>
+	<li><a href="/nanowrimo/">NanoWrimo</a></li>
+	
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/code-for-thought/">Code For Thought</a></li>
+	<li><a href="/traveling-code/">Traveling Code</a></li>
+	<li><a href="/nanowrimo/">NanoWrimo</a></li>
+	
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:dukeran.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">What Went Wrong With Postgres</h2>
+	<div class="entry-content"><h3>The Beginnings</h3>
+
+<p>A couple of days ago I started at my job working for the up and coming ventured back Quottly! It&rsquo;s a starting intern position and I am incredibly excited to for them. For me it&rsquo;s more than just a job, it means progress and growth from when I started a little over a year ago with my first ever programming book. I remember opening the first few pages of that programming book while there was some down time at my waitressing job. A customer has just turned my day from okay to miserable with a few nasty comments and I remembered the book that had been given to me by my good friend James when I had shown some interest in what he did for a living. I had at first taken it a little skeptically, thinking that someone like me could/would never learn to program, that it was already too late for me to start. But after glaring at the customer who had just left I was ready to try to do anything to get out of ever waiting another table again. If there was one thing I knew, it was that I had way too little patience and too much pride to wait on tables for the rest of my life.</p>
+
+<p>Sixth months later I quit my waitressing job to focus on programming and to live life as a broke college student. Seven months later I got hired as a Developer Intern at Quottly, working for the same friend who had given me the book in the first place. I had often come to Quottly&rsquo;s office to work on self-teaching programming books that James had given me or that I had downloaded from various sites after working hours. I would stay up until late at night and would drink copious amounts of coffee until I had learned just enough to get started. Now that my foot is in the door I am hoping that nothing will hold me back!</p>
+
+<p>That enthusiastic attitude that I had my first day nearly died earlier today once faced with the task of setting up. What is it about setting up the workspace that always takes me forever? In the very beginning, it was issues with Git, then it was issues with Rails servers, and today, it was an issue with postgres.</p>
+
+<!--more-->
+
+
+<p>It appeared that setting up a Development Environment on OSX would be easy enough. I doubled check to make sure I had Homebrew up and working</p>
+
+<p><code>$ brew --version</code></p>
+
+<p>Used RVM to install the correct Ruby version and then&hellip; came the trouble. Installing postgres can be very simple if everything is going right (which it rarely does for me);</p>
+
+<p><code>$ brew install postgres</code></p>
+
+<p>Then launch the following commands;</p>
+
+<p><code>$ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents</code></p>
+
+<p><code>$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist</code></p>
+
+<p>It appeared to be installing properly, everything looked nice, green, and working. Then there was this message right under a few paragraphs;</p>
+
+<p><code>...fixing permissions on existing directory /usr/local/var/postgres ... initdb: could not change permissions of directory "/usr/local/var/postgres": Operation not permitted</code></p>
+
+<p>hmmm. The first few times I tried installing and re-installing postgres (after failure to migrate) I hadn&rsquo;t noticed the message. If this message goes unnoticed, you&rsquo;re not able to <code>rake db:create db:migrate db:seed</code>. When I tried to <code>rake db:migrate</code> with the above mentioned error, I a long block of code (this is just the snippet);</p>
+
+<blockquote><p>&hellip;/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:1213:in <code>initialize'
+/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:1213:in</code>new'
+/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:1213:in <code>connect'
+/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:329:in</code>initialize'
+/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+&hellip;..
+&hellip;&hellip;</p></blockquote>
+
+<p>Yikes!</p>
+
+<p>A teammate suggested typing;</p>
+
+<p><code>$ psql</code></p>
+
+<p>and I received back;</p>
+
+<p><code>...Is the server running locally and accepting
+    connections on Unix domain socket "/tmp/.s.PGSQL.5432</code></p>
+
+<p>Fishy stuff. That at least got us on the right track. At this point I had uninstalled and re-installed postgres multiple times to no avail. The files existed for postgres! I check them multiple times at</p>
+
+<p><code>$ ls /usr/local/var/postgres/</code></p>
+
+<p>But it still wouldn&rsquo;t work. Then, I did something that I should&rsquo;ve done from the very, very, very beginning. Would have saved me and others hours. I went to the troubleshooting link that was in the message sent to me after installing postgres;</p>
+
+<p><a href="https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Troubleshooting.md#troubleshooting">https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Troubleshooting.md#troubleshooting</a></p>
+
+<p>It was there that we realized that we had a failure with permission errors.</p>
+
+<p><code>$ sudo chown -R $(whoami) /usr/local</code>
+and changing it to my username fixed everything!</p>
+
+<p>Now it&rsquo;s time to get to work!</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-06-27T21:43:15-04:00" pubdate data-updated="true"></time></div>
+	
+
+
+
+
+	
+		<span class="comments"><a href="/blog/2016/06/27/what-went-wrong-with-postgres/#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016
+
+    Kerrie Durham
+
+<br>
+Powered by Octopress.
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'dukeran';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dukeran.github.io/blog/2016/06/27/what-went-wrong-with-postgres/';
+        var disqus_url = 'http://dukeran.github.io/blog/2016/06/27/what-went-wrong-with-postgres/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@
 	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title>Setting Up Jekyll on Github Project Page  | TechReg</title>
+	<title>Making Mistakes With the DataBase  | TechReg</title>
 
 <meta name="author" content="Kerrie Durham"> 
 
@@ -101,37 +101,51 @@ $(document).ready(
 </header>
 
 	<div id="content" class="inner"><article class="post">
-	<h2 class="title">Setting Up Jekyll on Github Project Page</h2>
-	<div class="entry-content"><h3>How to set up pre-made Jekyll theme to your created Github Project Pages</h3>
+	<h2 class="title">Making Mistakes With the DataBase</h2>
+	<div class="entry-content"><h4>Everyday I am learning something new</h4>
 
-<p>Like most projects I begin, I immediately faced programming trouble and daunting challenges that made me second-guess my original enthusiasm for coding and for life in general.</p>
+<p>Today, I learned about databases and migrations. It seems like such a big thing for many intro books to gloss over but gloss over it they do. And there might be good reason to, it&rsquo;s complicated stuff! Even now as I type this I am not quite sure what databases are or how migrations work. However, I do know that naming conventions with Ruby is a tricky business and I learned that lesson the hard way today.</p>
 
-<p>But, as I have heard many times, patience is a virtue and one that I am sorely lacking. Not only do I consider programming a learning experience, but also as a way to learn how to instill problem solving techniques and practice self-restraint of letting my frustration and anger get the better of me.</p>
+<p>Working on MobiDick, I decided to create a personal bookshelf which I decided to name &lsquo;Pershelf&rsquo;, a nice, easy, and explanatory name (or so I thought). I ran</p>
 
-<p>So here is the problem I faced today; setting up a custom domain name for my Github Project Page and setting up a Jekyll theme to go along with it. Sounds easy right? I thought so too, but of course I found almost every wrong avenue to implement this&hellip;</p>
+<p><code>$ bin/rails generate scaffold Pershelf</code></p>
+
+<p><code>$ bin/rails db: migrate</code></p>
+
+<p>Everything so far okay. I modified the app/controllers/concerns/current_pershelf.rb folder and continued to the next step;</p>
+
+<p><code>$ bin/rails generate scaffold LineItem book:references pershelve:belongs_to</code></p>
+
+<p><code>$ bin/rails db:migrate</code></p>
 
 <!--more-->
 
 
-<p>Make sure you have your custom domain name</p>
+<p>Aaanddd now the problems begin. I spent a few hours going through test trying to figure out what went wrong, over and over again finding myself with an &lsquo;Undefined variable&rsquo; error. I saw that some files were labeled &lsquo;pershelve&rsquo; and immediately assumed that Ruby had incorrectly tried to pluralize then put the noun into singular form and messed up miserably so I went through all the files trying to rename everything to &lsquo;pershelf&rsquo; and then would put the plural as &lsquo;pershelfs&rsquo;. That definitely did not work. It wasn&rsquo;t until a co-worker of mine told me to look at the /db/schema.rb to take a look at how the database was set up. There it was! There error was as bright as day.</p>
 
-<p>First, create a cname</p>
+<p>I would never have thought to look at the database and once we realized that it was clearly human error that caused the issues, my co-worker walked me through the steps of fixing the error;</p>
 
-<p>Go to the FIRST documents and set up the IP address</p>
+<div id="container">
+<center><img src="http://i.imgur.com/s5e11uw.png"" height="600" width="600" style="margin:20px 20px">
+</center>
+<p>
+</p>
+</div>
 
-<p>Choose a theme</p>
 
-<p>make sure jekyll is installed and other gems</p>
+<p>I learned four important lessons today;</p>
 
-<p>Discuss how to actuall FORK a repo</p>
+<p>Ruby can, in fact, pluralize like a pro (I would love to see how ruby learned to do it so well!)</p>
 
-<p>Download to computer and move to the local repo</p>
+<p>Maybe coding while sick and with fever is not the best way to code</p>
 
-<p>NOT A REPO INSIDE OF A REPO</p>
+<p>Keep track of your spelling conventions!</p>
 
-<p>Change the url of the theme if it has one</p>
+<p>I learned how to fix errors in the database!</p>
 
-<p>Remember, you get ONE github page, everyother &lsquo;page&rsquo; you have is actually a sub domain name using /project/ not its own page. Make sure you know this</p>
+<p>pluralization of ruby in rails when generating scaffolding</p>
+
+<p>When you use rails to build scaffolding, it will expect certain conventions</p>
 </div>
 
 
@@ -148,14 +162,14 @@ $(document).ready(
   
 
 
-<time datetime="2016-05-31T22:08:58-04:00" pubdate data-updated="true"></time></div>
+<time datetime="2016-06-27T21:44:20-04:00" pubdate data-updated="true"></time></div>
 	
 
 
 
 
 	
-		<span class="comments"><a href="/blog/2016/05/31/setting-up-jekyll-on-github-project-page/#disqus_thread">Comments</a></span>
+		<span class="comments"><a href="/blog/2016/06/27/making-mistakes-with-the-database/#disqus_thread">Comments</a></span>
 	
 </div></article>
 
@@ -201,8 +215,8 @@ Powered by Octopress.
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://dukeran.github.io/blog/2016/05/31/setting-up-jekyll-on-github-project-page/';
-        var disqus_url = 'http://dukeran.github.io/blog/2016/05/31/setting-up-jekyll-on-github-project-page/';
+        var disqus_identifier = 'http://dukeran.github.io/blog/2016/06/27/making-mistakes-with-the-database/';
+        var disqus_url = 'http://dukeran.github.io/blog/2016/06/27/making-mistakes-with-the-database/';
         var disqus_script = 'embed.js';
       
     (function () {

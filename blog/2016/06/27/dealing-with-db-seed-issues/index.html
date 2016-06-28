@@ -1,0 +1,259 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>Dealing With db:seed Issues  | TechReg</title>
+
+<meta name="author" content="Kerrie Durham"> 
+
+<meta name="description" content="A playground for my imagination and thoughts."> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="TechReg" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+
+	
+</head>
+
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">TechReg</a></h1>
+<h4>building projects one day at a time</h4>
+<nav id="main-nav"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/code-for-thought/">Code For Thought</a></li>
+	<li><a href="/traveling-code/">Traveling Code</a></li>
+	<li><a href="/nanowrimo/">NanoWrimo</a></li>
+	
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/code-for-thought/">Code For Thought</a></li>
+	<li><a href="/traveling-code/">Traveling Code</a></li>
+	<li><a href="/nanowrimo/">NanoWrimo</a></li>
+	
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:dukeran.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Dealing With Db:seed Issues</h2>
+	<div class="entry-content"><h4>Dealing with db:seed issues</h4>
+
+<p>Today I added some information into the seeds.rb file and ran <code>$ bin/rails db:seed</code> and then <code>$ ran bin/rails s</code>. To my horror, all the information that I had had was gone! No errors showed up on local host and I felt at a loss since my understanding of databases is so limited. Thankfully with the help of my co-worker, we figured out a solution.</p>
+
+<p>Here&rsquo;s what I learned:</p>
+
+<p>If an error occurs with <code>$ bin/rails db:seed</code>, the error can be silent and not appear either on your console or on local host. It&rsquo;s almost like asking Rails what&rsquo;s wrong and she replies wistfully - nothing - but you know something is wrong. So you go ask Ruby by going into the Rails console and start running some tests;</p>
+
+<p><code>$ rails c</code></p>
+
+<p><code>$ Book.all</code>
+<br>
+ <code>...Book Load (0.2ms)  SELECT "books".* FROM "books"
+ =&gt; #&lt;ActiveRecord::Relation []&gt;</code></p>
+
+<!--more-->
+
+
+<p> Nothing there, at least that tells me that something is wrong, we just don&rsquo;t know what yet.</p>
+
+<p> Here&rsquo;s where we create a book on the console to be able to see what and where things go wrong;</p>
+
+<p><code>$ Book.create!(title: 'WinniePoo', description: %{&lt;p&gt; hello &lt;/p&gt;}, image_url: 'lol.jpg', review: 5.0)</code></p>
+
+<p>(use bang method to throw an error, otherwise it&rsquo;ll fail silently once again) Bang method usually has a destructive side effect when running with a command. Bang is like the antithesis of the command. It is a powerful method that I just learned today! Bang method is unique to the function. (fix this)</p>
+
+<blockquote><p>ActiveRecord::RecordInvalid: Validation failed: Image url must be a URL for GIF, JPG or PNG image.
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/validations.rb:78:in <code>raise_validation_error'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/validations.rb:50:in</code>save!&lsquo;
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/attribute_methods/dirty.rb:30:in <code>save!'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:324:in</code>block in save!&rsquo;
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:395:in <code>block in with_transaction_returning_status'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in</code>block in transaction'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/connection_adapters/abstract/transaction.rb:189:in <code>within_new_transaction'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in</code>transaction'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:211:in <code>transaction'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:392:in</code>with_transaction_returning_status'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:324:in <code>save!'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/suppressor.rb:45:in</code>save!&lsquo;
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/persistence.rb:51:in <code>create!'
+  from (irb):6
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands/console.rb:65:in</code>start&rsquo;
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands/console_helper.rb:9:in <code>start'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands/commands_tasks.rb:78:in</code>console'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands/commands_tasks.rb:49:in <code>run_command!'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands.rb:18:in</code><top (required)>&lsquo;
+  from bin/rails:4:in <code>require'
+  from bin/rails:4:in</code><main>&rsquo;</p></blockquote>
+
+<p>Here it is! List of errors. Now we can get started on problem solving.</p>
+
+<p>We went into the app/models/book.rb and I just completely removed the</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates</span> <span class="ss">:image_url</span><span class="p">,</span> <span class="ss">allow_blank</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="ss">with</span><span class="p">:</span> <span class="sr">%r{\ .(gif\ jpg\ png)\ Z}i</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">message</span><span class="p">:</span> <span class="s1">&#39;must be a URL for GIF, JPG or PNG image.&#39;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Since it has been causing me errors since the beginning. I ran <code>$ Book.create!...</code> again, and this time-success!</p>
+
+<p>I was able to <code>$ bin/rails db:seed</code> and my page is showing the books and data once again :D</p>
+
+<p>Every day I am reminded of how much I still have to learn.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-06-27T21:43:56-04:00" pubdate data-updated="true"></time></div>
+	
+
+
+
+
+	
+		<span class="comments"><a href="/blog/2016/06/27/dealing-with-db-seed-issues/#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2016
+
+    Kerrie Durham
+
+<br>
+Powered by Octopress.
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'dukeran';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dukeran.github.io/blog/2016/06/27/dealing-with-db-seed-issues/';
+        var disqus_url = 'http://dukeran.github.io/blog/2016/06/27/dealing-with-db-seed-issues/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+</body>
+</html>

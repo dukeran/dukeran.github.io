@@ -120,6 +120,162 @@ p.main {
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/blog/2016/06/27/making-mistakes-with-the-database/">
+		
+			Making Mistakes With the DataBase</a>
+	</h2>
+	<div class="entry-content">
+		<h4>Everyday I am learning something new</h4>
+
+<p>Today, I learned about databases and migrations. It seems like such a big thing for many intro books to gloss over but gloss over it they do. And there might be good reason to, it&rsquo;s complicated stuff! Even now as I type this I am not quite sure what databases are or how migrations work. However, I do know that naming conventions with Ruby is a tricky business and I learned that lesson the hard way today.</p>
+
+<p>Working on MobiDick, I decided to create a personal bookshelf which I decided to name &lsquo;Pershelf&rsquo;, a nice, easy, and explanatory name (or so I thought). I ran</p>
+
+<p><code>$ bin/rails generate scaffold Pershelf</code></p>
+
+<p><code>$ bin/rails db: migrate</code></p>
+
+<p>Everything so far okay. I modified the app/controllers/concerns/current_pershelf.rb folder and continued to the next step;</p>
+
+<p><code>$ bin/rails generate scaffold LineItem book:references pershelve:belongs_to</code></p>
+
+<p><code>$ bin/rails db:migrate</code></p>
+
+
+		
+		<a href="/blog/2016/06/27/making-mistakes-with-the-database/" class="more-link">Read on &rarr;</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-06-27T21:44:20-04:00" pubdate data-updated="true"></time></div>
+	
+
+
+
+
+	
+		<span class="comments"><a href="/blog/2016/06/27/making-mistakes-with-the-database//code-for-thought/index.html#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2016/06/27/dealing-with-db-seed-issues/">
+		
+			Dealing With Db:seed Issues</a>
+	</h2>
+	<div class="entry-content">
+		<h4>Dealing with db:seed issues</h4>
+
+<p>Today I added some information into the seeds.rb file and ran <code>$ bin/rails db:seed</code> and then <code>$ ran bin/rails s</code>. To my horror, all the information that I had had was gone! No errors showed up on local host and I felt at a loss since my understanding of databases is so limited. Thankfully with the help of my co-worker, we figured out a solution.</p>
+
+<p>Here&rsquo;s what I learned:</p>
+
+<p>If an error occurs with <code>$ bin/rails db:seed</code>, the error can be silent and not appear either on your console or on local host. It&rsquo;s almost like asking Rails what&rsquo;s wrong and she replies wistfully - nothing - but you know something is wrong. So you go ask Ruby by going into the Rails console and start running some tests;</p>
+
+<p><code>$ rails c</code></p>
+
+<p><code>$ Book.all</code>
+<br>
+ <code>...Book Load (0.2ms)  SELECT "books".* FROM "books"
+ =&gt; #&lt;ActiveRecord::Relation []&gt;</code></p>
+
+
+		
+		<a href="/blog/2016/06/27/dealing-with-db-seed-issues/" class="more-link">Read on &rarr;</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-06-27T21:43:56-04:00" pubdate data-updated="true"></time></div>
+	
+
+
+
+
+	
+		<span class="comments"><a href="/blog/2016/06/27/dealing-with-db-seed-issues//code-for-thought/index.html#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2016/06/27/what-went-wrong-with-postgres/">
+		
+			What Went Wrong With Postgres</a>
+	</h2>
+	<div class="entry-content">
+		<h3>The Beginnings</h3>
+
+<p>A couple of days ago I started at my job working for the up and coming ventured back Quottly! It&rsquo;s a starting intern position and I am incredibly excited to for them. For me it&rsquo;s more than just a job, it means progress and growth from when I started a little over a year ago with my first ever programming book. I remember opening the first few pages of that programming book while there was some down time at my waitressing job. A customer has just turned my day from okay to miserable with a few nasty comments and I remembered the book that had been given to me by my good friend James when I had shown some interest in what he did for a living. I had at first taken it a little skeptically, thinking that someone like me could/would never learn to program, that it was already too late for me to start. But after glaring at the customer who had just left I was ready to try to do anything to get out of ever waiting another table again. If there was one thing I knew, it was that I had way too little patience and too much pride to wait on tables for the rest of my life.</p>
+
+<p>Sixth months later I quit my waitressing job to focus on programming and to live life as a broke college student. Seven months later I got hired as a Developer Intern at Quottly, working for the same friend who had given me the book in the first place. I had often come to Quottly&rsquo;s office to work on self-teaching programming books that James had given me or that I had downloaded from various sites after working hours. I would stay up until late at night and would drink copious amounts of coffee until I had learned just enough to get started. Now that my foot is in the door I am hoping that nothing will hold me back!</p>
+
+<p>That enthusiastic attitude that I had my first day nearly died earlier today once faced with the task of setting up. What is it about setting up the workspace that always takes me forever? In the very beginning, it was issues with Git, then it was issues with Rails servers, and today, it was an issue with postgres.</p>
+
+
+		
+		<a href="/blog/2016/06/27/what-went-wrong-with-postgres/" class="more-link">Read on &rarr;</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-06-27T21:43:15-04:00" pubdate data-updated="true"></time></div>
+	
+
+
+
+
+	
+		<span class="comments"><a href="/blog/2016/06/27/what-went-wrong-with-postgres//code-for-thought/index.html#disqus_thread">Comments</a></span>
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/blog/2016/05/31/setting-up-jekyll-on-github-project-page/">
 		
 			Setting Up Jekyll on Github Project Page</a>
@@ -127,7 +283,11 @@ p.main {
 	<div class="entry-content">
 		<h3>How to set up pre-made Jekyll theme to your created Github Project Pages</h3>
 
-<p>Like most projects I begin, I immediately faced programming trouble and a daunting challenge that made me second-guess my original enthusiasm.</p>
+<p>Like most projects I begin, I immediately faced programming trouble and daunting challenges that made me second-guess my original enthusiasm for coding and for life in general.</p>
+
+<p>But, as I have heard many times, patience is a virtue and one that I am sorely lacking. Not only do I consider programming a learning experience, but also as a way to learn how to instill problem solving techniques and practice self-restraint of letting my frustration and anger get the better of me.</p>
+
+<p>So here is the problem I faced today; setting up a custom domain name for my Github Project Page and setting up a Jekyll theme to go along with it. Sounds easy right? I thought so too, but of course I found almost every wrong avenue to implement this&hellip;</p>
 
 
 		
@@ -156,49 +316,6 @@ p.main {
 
 	
 		<span class="comments"><a href="/blog/2016/05/31/setting-up-jekyll-on-github-project-page//code-for-thought/index.html#disqus_thread">Comments</a></span>
-	
-</div></article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2016/05/30/jekyll-github-pages/">
-		
-			Setting Up Jekyll on Github Project Pages</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to set up pre-made Jekyll theme to your created Github Project Pages</h3>
-
-<p>Like most projects I begin, I immediately faced programming trouble and a daunting challenge that made me second-guess my original enthusiasm.</p>
-
-
-		
-		<a href="/blog/2016/05/30/jekyll-github-pages/" class="more-link">Read on &rarr;</a>
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-05-30T18:21:22-04:00" pubdate data-updated="true"></time></div>
-	
-
-
-
-
-	
-		<span class="comments"><a href="/blog/2016/05/30/jekyll-github-pages//code-for-thought/index.html#disqus_thread">Comments</a></span>
 	
 </div></article>
 

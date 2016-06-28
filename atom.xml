@@ -4,7 +4,7 @@
   <title><![CDATA[TechReg]]></title>
   <link href="http://dukeran.github.io/atom.xml" rel="self"/>
   <link href="http://dukeran.github.io/"/>
-  <updated>2016-05-31T22:12:37-04:00</updated>
+  <updated>2016-06-27T22:23:20-04:00</updated>
   <id>http://dukeran.github.io/</id>
   <author>
     <name><![CDATA[Kerrie Durham]]></name>
@@ -14,240 +14,241 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Making Mistakes With the DataBase]]></title>
+    <link href="http://dukeran.github.io/blog/2016/06/27/making-mistakes-with-the-database/"/>
+    <updated>2016-06-27T21:44:20-04:00</updated>
+    <id>http://dukeran.github.io/blog/2016/06/27/making-mistakes-with-the-database</id>
+    <content type="html"><![CDATA[<h4>Everyday I am learning something new</h4>
+
+<p>Today, I learned about databases and migrations. It seems like such a big thing for many intro books to gloss over but gloss over it they do. And there might be good reason to, it&rsquo;s complicated stuff! Even now as I type this I am not quite sure what databases are or how migrations work. However, I do know that naming conventions with Ruby is a tricky business and I learned that lesson the hard way today.</p>
+
+<p>Working on MobiDick, I decided to create a personal bookshelf which I decided to name &lsquo;Pershelf&rsquo;, a nice, easy, and explanatory name (or so I thought). I ran</p>
+
+<p><code>$ bin/rails generate scaffold Pershelf</code></p>
+
+<p><code>$ bin/rails db: migrate</code></p>
+
+<p>Everything so far okay. I modified the app/controllers/concerns/current_pershelf.rb folder and continued to the next step;</p>
+
+<p><code>$ bin/rails generate scaffold LineItem book:references pershelve:belongs_to</code></p>
+
+<p><code>$ bin/rails db:migrate</code></p>
+
+<!--more-->
+
+
+<p>Aaanddd now the problems begin. I spent a few hours going through test trying to figure out what went wrong, over and over again finding myself with an &lsquo;Undefined variable&rsquo; error. I saw that some files were labeled &lsquo;pershelve&rsquo; and immediately assumed that Ruby had incorrectly tried to pluralize then put the noun into singular form and messed up miserably so I went through all the files trying to rename everything to &lsquo;pershelf&rsquo; and then would put the plural as &lsquo;pershelfs&rsquo;. That definitely did not work. It wasn&rsquo;t until a co-worker of mine told me to look at the /db/schema.rb to take a look at how the database was set up. There it was! There error was as bright as day.</p>
+
+<p>I would never have thought to look at the database and once we realized that it was clearly human error that caused the issues, my co-worker walked me through the steps of fixing the error;</p>
+
+<div id="container">
+<center><img src="http://i.imgur.com/s5e11uw.png"" height="600" width="600" style="margin:20px 20px">
+</center>
+<p>
+</p>
+</div>
+
+
+<p>I learned four important lessons today;</p>
+
+<p>Ruby can, in fact, pluralize like a pro (I would love to see how ruby learned to do it so well!)</p>
+
+<p>Maybe coding while sick and with fever is not the best way to code</p>
+
+<p>Keep track of your spelling conventions!</p>
+
+<p>I learned how to fix errors in the database!</p>
+
+<p>pluralization of ruby in rails when generating scaffolding</p>
+
+<p>When you use rails to build scaffolding, it will expect certain conventions</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Dealing With db:seed Issues]]></title>
+    <link href="http://dukeran.github.io/blog/2016/06/27/dealing-with-db-seed-issues/"/>
+    <updated>2016-06-27T21:43:56-04:00</updated>
+    <id>http://dukeran.github.io/blog/2016/06/27/dealing-with-db-seed-issues</id>
+    <content type="html"><![CDATA[<h4>Dealing with db:seed issues</h4>
+
+<p>Today I added some information into the seeds.rb file and ran <code>$ bin/rails db:seed</code> and then <code>$ ran bin/rails s</code>. To my horror, all the information that I had had was gone! No errors showed up on local host and I felt at a loss since my understanding of databases is so limited. Thankfully with the help of my co-worker, we figured out a solution.</p>
+
+<p>Here&rsquo;s what I learned:</p>
+
+<p>If an error occurs with <code>$ bin/rails db:seed</code>, the error can be silent and not appear either on your console or on local host. It&rsquo;s almost like asking Rails what&rsquo;s wrong and she replies wistfully - nothing - but you know something is wrong. So you go ask Ruby by going into the Rails console and start running some tests;</p>
+
+<p><code>$ rails c</code></p>
+
+<p><code>$ Book.all</code>
+<br>
+ <code>...Book Load (0.2ms)  SELECT "books".* FROM "books"
+ =&gt; #&lt;ActiveRecord::Relation []&gt;</code></p>
+
+<!--more-->
+
+
+<p> Nothing there, at least that tells me that something is wrong, we just don&rsquo;t know what yet.</p>
+
+<p> Here&rsquo;s where we create a book on the console to be able to see what and where things go wrong;</p>
+
+<p><code>$ Book.create!(title: 'WinniePoo', description: %{&lt;p&gt; hello &lt;/p&gt;}, image_url: 'lol.jpg', review: 5.0)</code></p>
+
+<p>(use bang method to throw an error, otherwise it&rsquo;ll fail silently once again) Bang method usually has a destructive side effect when running with a command. Bang is like the antithesis of the command. It is a powerful method that I just learned today! Bang method is unique to the function. (fix this)</p>
+
+<blockquote><p>ActiveRecord::RecordInvalid: Validation failed: Image url must be a URL for GIF, JPG or PNG image.
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/validations.rb:78:in <code>raise_validation_error'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/validations.rb:50:in</code>save!&lsquo;
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/attribute_methods/dirty.rb:30:in <code>save!'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:324:in</code>block in save!&rsquo;
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:395:in <code>block in with_transaction_returning_status'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in</code>block in transaction'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/connection_adapters/abstract/transaction.rb:189:in <code>within_new_transaction'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in</code>transaction'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:211:in <code>transaction'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:392:in</code>with_transaction_returning_status'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/transactions.rb:324:in <code>save!'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/suppressor.rb:45:in</code>save!&lsquo;
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0.rc1/lib/active_record/persistence.rb:51:in <code>create!'
+  from (irb):6
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands/console.rb:65:in</code>start&rsquo;
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands/console_helper.rb:9:in <code>start'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands/commands_tasks.rb:78:in</code>console'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands/commands_tasks.rb:49:in <code>run_command!'
+  from /Users/quottly/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.rc1/lib/rails/commands.rb:18:in</code><top (required)>&lsquo;
+  from bin/rails:4:in <code>require'
+  from bin/rails:4:in</code><main>&rsquo;</p></blockquote>
+
+<p>Here it is! List of errors. Now we can get started on problem solving.</p>
+
+<p>We went into the app/models/book.rb and I just completely removed the</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates</span> <span class="ss">:image_url</span><span class="p">,</span> <span class="ss">allow_blank</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="ss">with</span><span class="p">:</span> <span class="sr">%r{\ .(gif\ jpg\ png)\ Z}i</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">message</span><span class="p">:</span> <span class="s1">&#39;must be a URL for GIF, JPG or PNG image.&#39;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Since it has been causing me errors since the beginning. I ran <code>$ Book.create!...</code> again, and this time-success!</p>
+
+<p>I was able to <code>$ bin/rails db:seed</code> and my page is showing the books and data once again :D</p>
+
+<p>Every day I am reminded of how much I still have to learn.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What Went Wrong With Postgres]]></title>
+    <link href="http://dukeran.github.io/blog/2016/06/27/what-went-wrong-with-postgres/"/>
+    <updated>2016-06-27T21:43:15-04:00</updated>
+    <id>http://dukeran.github.io/blog/2016/06/27/what-went-wrong-with-postgres</id>
+    <content type="html"><![CDATA[<h3>The Beginnings</h3>
+
+<p>A couple of days ago I started at my job working for the up and coming ventured back Quottly! It&rsquo;s a starting intern position and I am incredibly excited to for them. For me it&rsquo;s more than just a job, it means progress and growth from when I started a little over a year ago with my first ever programming book. I remember opening the first few pages of that programming book while there was some down time at my waitressing job. A customer has just turned my day from okay to miserable with a few nasty comments and I remembered the book that had been given to me by my good friend James when I had shown some interest in what he did for a living. I had at first taken it a little skeptically, thinking that someone like me could/would never learn to program, that it was already too late for me to start. But after glaring at the customer who had just left I was ready to try to do anything to get out of ever waiting another table again. If there was one thing I knew, it was that I had way too little patience and too much pride to wait on tables for the rest of my life.</p>
+
+<p>Sixth months later I quit my waitressing job to focus on programming and to live life as a broke college student. Seven months later I got hired as a Developer Intern at Quottly, working for the same friend who had given me the book in the first place. I had often come to Quottly&rsquo;s office to work on self-teaching programming books that James had given me or that I had downloaded from various sites after working hours. I would stay up until late at night and would drink copious amounts of coffee until I had learned just enough to get started. Now that my foot is in the door I am hoping that nothing will hold me back!</p>
+
+<p>That enthusiastic attitude that I had my first day nearly died earlier today once faced with the task of setting up. What is it about setting up the workspace that always takes me forever? In the very beginning, it was issues with Git, then it was issues with Rails servers, and today, it was an issue with postgres.</p>
+
+<!--more-->
+
+
+<p>It appeared that setting up a Development Environment on OSX would be easy enough. I doubled check to make sure I had Homebrew up and working</p>
+
+<p><code>$ brew --version</code></p>
+
+<p>Used RVM to install the correct Ruby version and then&hellip; came the trouble. Installing postgres can be very simple if everything is going right (which it rarely does for me);</p>
+
+<p><code>$ brew install postgres</code></p>
+
+<p>Then launch the following commands;</p>
+
+<p><code>$ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents</code></p>
+
+<p><code>$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist</code></p>
+
+<p>It appeared to be installing properly, everything looked nice, green, and working. Then there was this message right under a few paragraphs;</p>
+
+<p><code>...fixing permissions on existing directory /usr/local/var/postgres ... initdb: could not change permissions of directory "/usr/local/var/postgres": Operation not permitted</code></p>
+
+<p>hmmm. The first few times I tried installing and re-installing postgres (after failure to migrate) I hadn&rsquo;t noticed the message. If this message goes unnoticed, you&rsquo;re not able to <code>rake db:create db:migrate db:seed</code>. When I tried to <code>rake db:migrate</code> with the above mentioned error, I a long block of code (this is just the snippet);</p>
+
+<blockquote><p>&hellip;/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:1213:in <code>initialize'
+/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:1213:in</code>new'
+/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:1213:in <code>connect'
+/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:329:in</code>initialize'
+/usr/local/Cellar/ruby/1.9.3-p327/lib/ruby/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+&hellip;..
+&hellip;&hellip;</p></blockquote>
+
+<p>Yikes!</p>
+
+<p>A teammate suggested typing;</p>
+
+<p><code>$ psql</code></p>
+
+<p>and I received back;</p>
+
+<p><code>...Is the server running locally and accepting
+    connections on Unix domain socket "/tmp/.s.PGSQL.5432</code></p>
+
+<p>Fishy stuff. That at least got us on the right track. At this point I had uninstalled and re-installed postgres multiple times to no avail. The files existed for postgres! I check them multiple times at</p>
+
+<p><code>$ ls /usr/local/var/postgres/</code></p>
+
+<p>But it still wouldn&rsquo;t work. Then, I did something that I should&rsquo;ve done from the very, very, very beginning. Would have saved me and others hours. I went to the troubleshooting link that was in the message sent to me after installing postgres;</p>
+
+<p><a href="https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Troubleshooting.md#troubleshooting">https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Troubleshooting.md#troubleshooting</a></p>
+
+<p>It was there that we realized that we had a failure with permission errors.</p>
+
+<p><code>$ sudo chown -R $(whoami) /usr/local</code>
+and changing it to my username fixed everything!</p>
+
+<p>Now it&rsquo;s time to get to work!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Setting Up Jekyll on Github Project Page]]></title>
     <link href="http://dukeran.github.io/blog/2016/05/31/setting-up-jekyll-on-github-project-page/"/>
     <updated>2016-05-31T22:08:58-04:00</updated>
     <id>http://dukeran.github.io/blog/2016/05/31/setting-up-jekyll-on-github-project-page</id>
     <content type="html"><![CDATA[<h3>How to set up pre-made Jekyll theme to your created Github Project Pages</h3>
 
-<p>Like most projects I begin, I immediately faced programming trouble and a daunting challenge that made me second-guess my original enthusiasm.</p>
+<p>Like most projects I begin, I immediately faced programming trouble and daunting challenges that made me second-guess my original enthusiasm for coding and for life in general.</p>
+
+<p>But, as I have heard many times, patience is a virtue and one that I am sorely lacking. Not only do I consider programming a learning experience, but also as a way to learn how to instill problem solving techniques and practice self-restraint of letting my frustration and anger get the better of me.</p>
+
+<p>So here is the problem I faced today; setting up a custom domain name for my Github Project Page and setting up a Jekyll theme to go along with it. Sounds easy right? I thought so too, but of course I found almost every wrong avenue to implement this&hellip;</p>
 
 <!--more-->
 
 
-<p>You&rsquo;re given the following:</p>
+<p>Make sure you have your custom domain name</p>
 
-<p>def stringy(size)
- (insert your code here)
-end</p>
+<p>First, create a cname</p>
 
-<p>I first thought about how to approach the problem in the most simple way possible. How could I break it down so that the string starting at one?</p>
+<p>Go to the FIRST documents and set up the IP address</p>
 
-<p>my first thought was to start at: &lsquo;&rsquo;&lsquo;base = &ldquo;1&rdquo;&rsquo;&lsquo;&rsquo; and go from there. I recalled the first method I internalized;</p>
+<p>Choose a theme</p>
 
-<p>(1..size).each do |number|</p>
+<p>make sure jekyll is installed and other gems</p>
 
-<p>because size is within the parenthesis, Ruby knows that size is going to be a variable for a number. The &ldquo;number&rdquo; put into &ldquo;| |&rdquo; symbolism is giving a variable name to what is inside the parenthesis.
-I figured that for every other number I would want a &ldquo;1&rdquo; and then a &ldquo;0&rdquo; so with this dichotomy I figured I could equate it to even and odds. For every odd I would assign a &ldquo;1&rdquo; value and for every even I would assign a &ldquo;0&rdquo; value. Mind you, I was writing anything that came to mind and erasing and cleaning up things as I went. At this point I removed the base = &ldquo;1&rdquo; since I would be no longer needing it if my array started at 1 and I could assign a &ldquo;1&rdquo; on the 1 value.</p>
+<p>Discuss how to actuall FORK a repo</p>
 
-<p>after running a few tests, I came up with the following:</p>
+<p>Download to computer and move to the local repo</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">stringy</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.size</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">number</span><span class="o">|</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">number</span><span class="o">.</span><span class="n">odd?</span>
-</span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;1&quot;</span>
-</span><span class='line'>  <span class="k">else</span>
-</span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;0&quot;</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="nb">puts</span> <span class="n">stringy</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>NOT A REPO INSIDE OF A REPO</p>
 
+<p>Change the url of the theme if it has one</p>
 
-<p>`</p>
-
-<p>This did not work quite how I wanted it to:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">1</span>
-</span><span class='line'><span class="mi">0</span>
-</span><span class='line'><span class="mi">1</span>
-</span><span class='line'><span class="mi">0</span>
-</span><span class='line'><span class="mi">1</span>
-</span><span class='line'><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">5</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>First of all, what was with the <code>1..5</code>? I was confused and so I asked a friend. Ruby, when not given a specific task, will regurgitate as much as she can, trying to give you as much information as possible unless specified otherwise. Since nothing was specified between the end of the <code>if</code>, <code>else</code> and the <code>end</code> of the defining method, then ruby told you the parameters of what she did was between 1 and 5, hence the 1..5. Another thing to note is that Ruby gave us the 1&rsquo;s and 0&rsquo;s we were looking for, but not in a consecutive line. It turns out that ruby will print out each variable on its own line unless specifically told not to.</p>
-
-<p>The next round I specifically told ruby to print the variables on the same line:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">stringy</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-</span><span class='line'>  <span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-</span><span class='line'>  <span class="n">size</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">number</span><span class="o">|</span>
-</span><span class='line'>    <span class="k">if</span> <span class="n">number</span><span class="o">.</span><span class="n">even?</span>
-</span><span class='line'>      <span class="n">string</span> <span class="o">=</span> <span class="n">string</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span>
-</span><span class='line'>    <span class="k">else</span>
-</span><span class='line'>      <span class="n">string</span> <span class="o">=</span> <span class="n">string</span> <span class="o">+</span> <span class="s1">&#39;0&#39;</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  <span class="n">string</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Also, what is significant about this code compared to the last code I tried is that in the first code I applied a function to the range and in the second code I used a method and applied it to a variable. For example in the first code <code>(1..size).each do |number|</code> the <code>.each</code> applies to the inclusive range, applying the function to each number in the range.
-In the second code in the third line <code>size.times do |n|</code>, the <code>.times</code>  function means that the method will perform that function as many times as you specify in the <code>n</code> variable.
-In this case, there isn&rsquo;t much difference between the two except that <code>.times</code> can be applied to a stand-alone variable while <code>.each</code> <em>has to</em> apply to more than one variable. It is perfectly acceptable to write <code> (1..size).each do |number|</code> in the second code on line 3 in place of what is there.</p>
-
-<p>A few other solutions were:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">stringy</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.size</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">number</span><span class="o">|</span> <span class="n">number</span><span class="o">.</span><span class="n">even?</span> <span class="p">?</span> <span class="s1">&#39;0&#39;</span> <span class="p">:</span> <span class="s1">&#39;1&#39;</span> <span class="p">}</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In this case I learned something knew. I hadn&rsquo;t seen the <code>.map</code> function before. <code>.map</code> applies a function onto every single member of that range. The curly brackets are a shorthand for <code>do</code>/<code>end</code>, allowing the entire method to be on one line, shortening the code. The <code>?</code> is calling up the Boolean method (see previous post) and the <code>:</code> act as an OR method.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setting Up Jekyll on Github Project Pages]]></title>
-    <link href="http://dukeran.github.io/blog/2016/05/30/jekyll-github-pages/"/>
-    <updated>2016-05-30T18:21:22-04:00</updated>
-    <id>http://dukeran.github.io/blog/2016/05/30/jekyll-github-pages</id>
-    <content type="html"><![CDATA[<h3>How to set up pre-made Jekyll theme to your created Github Project Pages</h3>
-
-<p>Like most projects I begin, I immediately faced programming trouble and a daunting challenge that made me second-guess my original enthusiasm.</p>
-
-<!--more-->
-
-
-<p>You&rsquo;re given the following:</p>
-
-<p>def stringy(size)
- (insert your code here)
-end</p>
-
-<p>I first thought about how to approach the problem in the most simple way possible. How could I break it down so that the string starting at one?</p>
-
-<p>my first thought was to start at: &lsquo;&rsquo;&lsquo;base = &ldquo;1&rdquo;&rsquo;&lsquo;&rsquo; and go from there. I recalled the first method I internalized;</p>
-
-<p>(1..size).each do |number|</p>
-
-<p>because size is within the parenthesis, Ruby knows that size is going to be a variable for a number. The &ldquo;number&rdquo; put into &ldquo;| |&rdquo; symbolism is giving a variable name to what is inside the parenthesis.
-I figured that for every other number I would want a &ldquo;1&rdquo; and then a &ldquo;0&rdquo; so with this dichotomy I figured I could equate it to even and odds. For every odd I would assign a &ldquo;1&rdquo; value and for every even I would assign a &ldquo;0&rdquo; value. Mind you, I was writing anything that came to mind and erasing and cleaning up things as I went. At this point I removed the base = &ldquo;1&rdquo; since I would be no longer needing it if my array started at 1 and I could assign a &ldquo;1&rdquo; on the 1 value.</p>
-
-<p>after running a few tests, I came up with the following:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">stringy</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.size</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">number</span><span class="o">|</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">number</span><span class="o">.</span><span class="n">odd?</span>
-</span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;1&quot;</span>
-</span><span class='line'>  <span class="k">else</span>
-</span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;0&quot;</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="nb">puts</span> <span class="n">stringy</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>`</p>
-
-<p>This did not work quite how I wanted it to:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">1</span>
-</span><span class='line'><span class="mi">0</span>
-</span><span class='line'><span class="mi">1</span>
-</span><span class='line'><span class="mi">0</span>
-</span><span class='line'><span class="mi">1</span>
-</span><span class='line'><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">5</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>First of all, what was with the <code>1..5</code>? I was confused and so I asked a friend. Ruby, when not given a specific task, will regurgitate as much as she can, trying to give you as much information as possible unless specified otherwise. Since nothing was specified between the end of the <code>if</code>, <code>else</code> and the <code>end</code> of the defining method, then ruby told you the parameters of what she did was between 1 and 5, hence the 1..5. Another thing to note is that Ruby gave us the 1&rsquo;s and 0&rsquo;s we were looking for, but not in a consecutive line. It turns out that ruby will print out each variable on its own line unless specifically told not to.</p>
-
-<p>The next round I specifically told ruby to print the variables on the same line:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">stringy</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-</span><span class='line'>  <span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-</span><span class='line'>  <span class="n">size</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">number</span><span class="o">|</span>
-</span><span class='line'>    <span class="k">if</span> <span class="n">number</span><span class="o">.</span><span class="n">even?</span>
-</span><span class='line'>      <span class="n">string</span> <span class="o">=</span> <span class="n">string</span> <span class="o">+</span> <span class="s1">&#39;1&#39;</span>
-</span><span class='line'>    <span class="k">else</span>
-</span><span class='line'>      <span class="n">string</span> <span class="o">=</span> <span class="n">string</span> <span class="o">+</span> <span class="s1">&#39;0&#39;</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  <span class="n">string</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Also, what is significant about this code compared to the last code I tried is that in the first code I applied a function to the range and in the second code I used a method and applied it to a variable. For example in the first code <code>(1..size).each do |number|</code> the <code>.each</code> applies to the inclusive range, applying the function to each number in the range.
-In the second code in the third line <code>size.times do |n|</code>, the <code>.times</code>  function means that the method will perform that function as many times as you specify in the <code>n</code> variable.
-In this case, there isn&rsquo;t much difference between the two except that <code>.times</code> can be applied to a stand-alone variable while <code>.each</code> <em>has to</em> apply to more than one variable. It is perfectly acceptable to write <code> (1..size).each do |number|</code> in the second code on line 3 in place of what is there.</p>
-
-<p>A few other solutions were:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">stringy</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.size</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">number</span><span class="o">|</span> <span class="n">number</span><span class="o">.</span><span class="n">even?</span> <span class="p">?</span> <span class="s1">&#39;0&#39;</span> <span class="p">:</span> <span class="s1">&#39;1&#39;</span> <span class="p">}</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In this case I learned something knew. I hadn&rsquo;t seen the <code>.map</code> function before. <code>.map</code> applies a function onto every single member of that range. The curly brackets are a shorthand for <code>do</code>/<code>end</code>, allowing the entire method to be on one line, shortening the code. The <code>?</code> is calling up the Boolean method (see previous post) and the <code>:</code> act as an OR method.</p>
+<p>Remember, you get ONE github page, everyother &lsquo;page&rsquo; you have is actually a sub domain name using /project/ not its own page. Make sure you know this</p>
 ]]></content>
   </entry>
   
