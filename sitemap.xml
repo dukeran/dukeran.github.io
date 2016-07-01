@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://dukeran.github.io/blog/2016/06/30/time-matters/</loc>
+<lastmod>2016-06-30T23:34:41-04:00</lastmod>
+</url>
+<url>
 <loc>http://dukeran.github.io/blog/2016/06/27/making-mistakes-with-the-database/</loc>
 <lastmod>2016-06-27T21:44:20-04:00</lastmod>
 </url>
@@ -53,25 +57,25 @@
 <lastmod>2016-01-23T12:22:19-05:00</lastmod>
 </url>
 <url>
-<loc>http://dukeran.github.io/nanowrimo/</loc>
-</url>
-<url>
 <loc>http://dukeran.github.io/archives/</loc>
-</url>
-<url>
-<loc>http://dukeran.github.io/code-for-thought/</loc>
-</url>
-<url>
-<loc>http://dukeran.github.io/blog/</loc>
 </url>
 <url>
 <loc>http://dukeran.github.io/blog/archives/</loc>
 </url>
 <url>
-<loc>http://dukeran.github.io/traveling-code/</loc>
+<loc>http://dukeran.github.io/blog/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/code-for-thought/</loc>
 </url>
 <url>
 <loc>http://dukeran.github.io/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/traveling-code/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/nanowrimo/</loc>
 </url>
 <url>
 <loc>http://dukeran.github.io/about/</loc>
@@ -84,5 +88,8 @@
 </url>
 <url>
 <loc>http://dukeran.github.io/blog/categories/code-for-thought/</loc>
+</url>
+<url>
+<loc>http://dukeran.github.io/posts/2/</loc>
 </url>
 </urlset>
